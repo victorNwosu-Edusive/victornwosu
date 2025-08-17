@@ -55,7 +55,7 @@ function App() {
         <div className='p-11 pt-36 md:p-20 lg:p-20'>
           <div className='grid md:grid-cols-2 lg:grid-cols-2 md:gap-3 lg:gap-3 gap-8'>
             <div>
-            <h1 className='text-3xl md:text-4xl lg:text-4xl font-bold'>About <span className='italic'>me</span></h1>
+            <h1 className='text-2xl md:text-4xl lg:text-4xl font-bold'>About me</h1>
             <p className='text-base text-slate-300'>Get to know me</p>
               <p className='text-[14px] mt-5'>
               I'm Victor, I'm a Tech enthusiast, a visionary, a Christian, a Frontend 
@@ -82,7 +82,7 @@ function App() {
 
         
         <div className='p-11 pt-36 md:p-20 lg:p-20'>
-        <h1 className='text-3xl font-bold'>Projects</h1>
+        <h1 className='text-2xl font-bold'>Projects</h1>
         <p className='text-sm text-slate-300 mb-20'>Take a look at my projects and past works and see what resonates with you.</p>
         <div className='grid md:grid-cols-3 lg:grid-cols-3 gap-8'>
         <div className='bg-[#050e23] border-[1px] border-slate-600 rounded-2xl'>
@@ -161,7 +161,7 @@ function App() {
 
 
         <div className='p-11 pt-36 md:p-20 lg:p-20'>
-        <h1 className='text-3xl font-bold mb-8'>Skills & Tech Stack</h1>
+        <h1 className='text-2xl font-bold mb-8'>Skills & Tech Stack</h1>
         </div>
         <div className='grid md:px-10 lg:px-20 pb-20 grid-cols-2 md:grid-cols-3 lg:grid-cols-3 gap-2 *:cursor-pointer *:border-slate-700 *:border-[1px] '>
         
@@ -196,7 +196,7 @@ function App() {
         </div>
 
         <div className='p-11 pt-36 md:p-20 lg:p-20'>
-        <h1 className='text-3xl font-bold'>Process</h1>
+        <h1 className='text-2xl font-bold'>Process</h1>
         <p className='text-sm text-slate-300 mb-20'>I use the Agile model of development</p>
         <div className='grid md:grid-cols-3 lg:grid-cols-3 gap-7'>
         <div className='relative bg-gradient-to-r from-[#050e23] to-[#061a47] border-[1px] border-slate-600 rounded-2xl'>
