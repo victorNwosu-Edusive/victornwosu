@@ -26,7 +26,7 @@ function App() {
           <div className='grid gap-10 md:gap-4 lg:gap-4 md:grid-cols-2 lg:grid-cols-2'>
 
             <div>
-            <h1 className='text-[13px] md:text-[14px] lg:text-[14px] text-[#48daf7] tracking-widest font-bold mb-4'>HELLO WORLD</h1>
+            <h1 className='text-[13px] md:text-[14px] lg:text-[14px] text-[#48daf7] tracking-widest font-bold mb-4'>HELLO WORLD!</h1>
           <h1 className='text-3xl md:text-4xl lg:text-4xl'>I'm <span className='font-bold'>Victor Nwosu</span></h1>
         <p className='text-[17px] md:text-2xl lg:text-2xl'>Frontend Web Developer</p>
         <p className='text-sm mt-2 mb-8'>Creator  .  Tech Enthusiast</p>
@@ -66,12 +66,12 @@ function App() {
               and Tech opportunities.
               </p>
 
-                <h1 className='font-bold mt-6 mb-2'>Interests:</h1>
+                {/*<h1 className='font-bold mt-6 mb-2'>Interests:</h1>
                 <div className=' rounded-xl md:p-2 lg:p-2 px-6 bg-[#0a1838] border-slate- w-fit flex justify-items-start gap-3 '>
                 <img src={city} alt="" className='w-14' />
                 <img src={google} alt="" className='w-10' />
                 <img src={youtube} alt="" className='w-10' />
-              </div>
+              </div>*/}
             </div>
 
             <div className='flex justify-center items-center'>
