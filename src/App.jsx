@@ -28,7 +28,7 @@ function App() {
             <div>
             <h1 className='text-[13px] md:text-[14px] lg:text-[14px] text-[#48daf7] tracking-widest font-bold'>HELLO WORLD</h1>
           <h1 className='text-3xl md:text-4xl lg:text-4xl'>I'm <span className='font-bold'>Victor Nwosu</span></h1>
-        <p className='text-[17px] md:text-2xl lg:text-2xl -rotate-2'>Frontend Web Developer</p>
+        <p className='text-[17px] md:text-2xl lg:text-2xl'>Frontend Web Developer</p>
         <p className='text-sm mt-2 mb-8'>Creator  .  Tech Enthusiast</p>
         <div className='flex gap-3'>
         <FontAwesomeIcon icon={faLinkedin} className="text-white text-xl" />
