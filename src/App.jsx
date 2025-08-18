@@ -47,7 +47,7 @@ function App() {
 
         <div className='p-4 bg-gradient-to-r from-[#2fcde1] to-[#062b47] mx-7'>
           <div className='flex gap-3 items-center'>
-            <button className='bg-transparent border-[1.5px] hover:bg-white/25 duration-300 text-sm border-white rounded-md px-6 p-2 flex gap-3 justify-center items-center'><FontAwesomeIcon icon={faGoogleDrive} className="text-white text-sm" /> Download Resume</button>
+            <a className='bg-transparent border-[1.5px] cursor-pointer hover:bg-white/25 duration-300 text-sm border-white rounded-md px-6 p-2 flex gap-3 justify-center items-center' href='https://drive.google.com/file/d/1-zPsCcv5sq_ALAEfcMxrAzJtiV4mHXts/view?usp=drivesdk'><FontAwesomeIcon icon={faGoogleDrive} className="text-white text-sm" /> Download Resume</a>
             <p>&#10229;</p>
           </div>
 
