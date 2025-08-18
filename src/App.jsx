@@ -14,6 +14,7 @@ import { faBehanceSquare, faCss, faFigma, faGithub, faInstagram, faInstagramSqua
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
 import './App.css'
 import Navbar from './components/Navbar'
+import { faGoogleDrive } from '@fortawesome/free-brands-svg-icons/faGoogleDrive'
 
 function App() {
   
@@ -25,7 +26,7 @@ function App() {
           <div className='grid gap-10 md:gap-4 lg:gap-4 md:grid-cols-2 lg:grid-cols-2'>
 
             <div>
-            <h1 className='text-2xl md:text-3xl lg:text-3xl text-[#48daf7]'>Hi,</h1>
+            <h1 className='text-[11px] md:text-[12px] lg:text-[12px] text-[#48daf7] tracking-widest font-bold'>HELLO WORLD</h1>
           <h1 className='text-3xl md:text-4xl lg:text-4xl'>I'm <span className='font-bold'>Victor Nwosu</span></h1>
         <p className='text-[17px] md:text-2xl lg:text-2xl -rotate-2'>Frontend Web Developer</p>
         <p className='text-sm mt-2 mb-8'>Creator  .  Tech Enthusiast</p>
@@ -46,7 +47,7 @@ function App() {
 
         <div className='p-4 bg-gradient-to-r from-[#2fcde1] to-[#062b47] mx-7'>
           <div className='flex gap-3 items-center'>
-            <button className='bg-transparent border-[1.5px] hover:bg-white/25 duration-300 text-sm border-white rounded-md px-6 p-2 flex gap-3 justify-center items-center'><FontAwesomeIcon icon={faFilePdf} className="text-white text-sm" /> Download Resume</button>
+            <button className='bg-transparent border-[1.5px] hover:bg-white/25 duration-300 text-sm border-white rounded-md px-6 p-2 flex gap-3 justify-center items-center'><FontAwesomeIcon icon={faGoogleDrive} className="text-white text-sm" /> Download Resume</button>
             <p>&#10229;</p>
           </div>
 
