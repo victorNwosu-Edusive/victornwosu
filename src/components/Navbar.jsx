@@ -2,6 +2,9 @@
 import icon from '../assets/images/favicon.png'
 import { useState } from 'react';
 import '../App.css'
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
+import { faHandSparkles, faSprayCanSparkles } from '@fortawesome/free-solid-svg-icons';
+import { faRocket } from '@fortawesome/free-solid-svg-icons/faRocket';
 
 function Navbar() {
   
@@ -81,12 +84,12 @@ function Navbar() {
           </button>
         </div>
 
-          <a href="#about-me" className="md:block  font-bold p-1 hover:text-[#48daf7] rounded-md duration-300 text-xl " onClick={closeMenu} title="About Us">About Me </a>
-          <a href="#projects" className="md:block  font-bold p-1 hover:text-[#48daf7] rounded-md  duration-300 text-xl " onClick={closeMenu} title='Features'>Projects</a>
-          <a href="#skills" className="md:block  font-bold p-1 hover:text-[#48daf7] rounded-md  duration-300 text-xl " onClick={closeMenu} title='Gallery'>Tech Stack</a>
-          <a href="#reviews" className="md:block  font-bold p-1 hover:text-[#48daf7] rounded-md duration-300 text-xl " onClick={closeMenu} title='Testimonial'>Reviews</a>
-          <a href="#contact" className="md:block  font-bold p-1 hover:text-[#48daf7] rounded-md  duration-300 text-xl " onClick={closeMenu} title='Contact Us'>Contact Me</a>
-            <button className='p-2 text-xl mx-16 mt-11 font-bold bg-[#48daf7] text-[#040a17] rounded-md'>Hire me</button>
+          <a href="#about-me" className="md:block  font-bold p-1 hover:text-[#48daf7] rounded-md duration-300 text-[17px]" onClick={closeMenu} title="About Us">About Me </a>
+          <a href="#projects" className="md:block  font-bold p-1 hover:text-[#48daf7] rounded-md  duration-300 text-[17px] " onClick={closeMenu} title='Features'>Projects</a>
+          <a href="#skills" className="md:block  font-bold p-1 hover:text-[#48daf7] rounded-md  duration-300 text-[17px] " onClick={closeMenu} title='Gallery'>Tech Stack</a>
+          <a href="#reviews" className="md:block  font-bold p-1 hover:text-[#48daf7] rounded-md duration-300 text-[17px] " onClick={closeMenu} title='Testimonial'>Reviews</a>
+          <a href="#contact" className="md:block  font-bold p-1 hover:text-[#48daf7] rounded-md  duration-300 text-[17px]" onClick={closeMenu} title='Contact Us'>Contact Me</a>
+            <button className='p-2 text-[13px] mx-16 mt-11 font-bold tracking-widest bg-[#48daf7] text-[#040a17] rounded-md flex justify-center items-center gap-3'>HIRE ME <FontAwesomeIcon icon={faRocket} className="text-[#040a17] text-[15px]" /></button>
       </div>
 
       
