@@ -89,7 +89,7 @@ function Navbar() {
           <a href="#skills" className="md:block  font-bold p-1 hover:text-[#48daf7] rounded-md  duration-300 text-[17px] " onClick={closeMenu} title='Gallery'>Tech Stack</a>
           <a href="#reviews" className="md:block  font-bold p-1 hover:text-[#48daf7] rounded-md duration-300 text-[17px] " onClick={closeMenu} title='Testimonial'>Reviews</a>
           <a href="#contact" className="md:block  font-bold p-1 hover:text-[#48daf7] rounded-md  duration-300 text-[17px]" onClick={closeMenu} title='Contact Us'>Contact Me</a>
-            <button className='p-2 text-[13px] mx-16 mt-11 font-bold tracking-widest bg-[#48daf7] text-[#040a17] rounded-md flex justify-center items-center gap-3'>HIRE ME <FontAwesomeIcon icon={faRocket} className="text-[#040a17] text-[15px]" /></button>
+            <button className='p-2 text-[13px] mx-16 mt-11 font-bold tracking-widest bg-[#48daf7] text-[#040a17] rounded-md flex justify-center items-center gap-3' onClick={closeMenu}>HIRE ME <FontAwesomeIcon icon={faRocket} className="text-[#040a17] text-[15px]" /></button>
       </div>
 
       
