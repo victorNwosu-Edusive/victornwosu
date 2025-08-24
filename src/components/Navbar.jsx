@@ -59,7 +59,7 @@ function Navbar() {
 
       <div id="mobile" className={`${
           isOpen ? "left-0" : "left-full"
-        }  fixed grid duration-500 transition-all delay-200 ease-out gap-1 text-left z-40 text-white font-primary text-sm h-auto w-full p-1 px-11 pb-60 pt-32 bg-[#040a17] backdrop-blur-md mx-auto max-w-screen-xl *:text-center `}>
+        }  fixed grid duration-500 transition-all delay-200 ease-out gap-1 text-left z-40 text-white font-primary text-sm h-auto w-full p-1 px-11 pb-72 pt-48 bg-[#040a17] backdrop-blur-md mx-auto max-w-screen-xl *:text-center `}>
           
           <div className="absolute top-8 right-8" onClick={toggleMenu}>
           <button className="text-white focus:outline-none relative scale-x-[-1] w-6 h-6 z-50">
@@ -81,11 +81,11 @@ function Navbar() {
           </button>
         </div>
 
-          <a href="#about-me" className="md:block  font-bold p-2 hover:text-[#48daf7] rounded-md duration-300 " onClick={closeMenu} title="About Us">About Me </a>
-          <a href="#projects" className="md:block  font-bold p-2 hover:text-[#48daf7] rounded-md  duration-300 " onClick={closeMenu} title='Features'>Projects</a>
-          <a href="#skills" className="md:block  font-bold p-2 hover:text-[#48daf7] rounded-md  duration-300 " onClick={closeMenu} title='Gallery'>Tech Stack</a>
-          <a href="#reviews" className="md:block  font-bold p-2 hover:text-[#48daf7] rounded-md duration-300 " onClick={closeMenu} title='Testimonial'>Reviews</a>
-          <a href="#contact" className="md:block  font-bold p-2 hover:text-[#48daf7] rounded-md  duration-300 " onClick={closeMenu} title='Contact Us'>Contact Me</a>
+          <a href="#about-me" className="md:block  font-bold p-1 hover:text-[#48daf7] rounded-md duration-300 text-xl " onClick={closeMenu} title="About Us">About Me </a>
+          <a href="#projects" className="md:block  font-bold p-1 hover:text-[#48daf7] rounded-md  duration-300 text-xl " onClick={closeMenu} title='Features'>Projects</a>
+          <a href="#skills" className="md:block  font-bold p-1 hover:text-[#48daf7] rounded-md  duration-300 text-xl " onClick={closeMenu} title='Gallery'>Tech Stack</a>
+          <a href="#reviews" className="md:block  font-bold p-1 hover:text-[#48daf7] rounded-md duration-300 text-xl " onClick={closeMenu} title='Testimonial'>Reviews</a>
+          <a href="#contact" className="md:block  font-bold p-1 hover:text-[#48daf7] rounded-md  duration-300 text-xl " onClick={closeMenu} title='Contact Us'>Contact Me</a>
       </div>
 
       
