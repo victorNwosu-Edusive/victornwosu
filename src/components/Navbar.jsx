@@ -59,7 +59,7 @@ function Navbar() {
 
       <div id="mobile" className={`${
           isOpen ? "left-0" : "left-full"
-        }  fixed grid duration-500 transition-all delay-200 ease-out gap-1 text-left z-40 text-white font-primary text-sm h-auto w-full p-1 px-11 pb-72 pt-48 bg-[#040a17] backdrop-blur-md mx-auto max-w-screen-xl *:text-center `}>
+        }  fixed grid duration-500 transition-all delay-200 ease-out gap-1 text-left z-40 text-white font-primary text-sm h-auto w-full p-1 px-11 pb-96 pt-48 bg-[#040a17] backdrop-blur-md mx-auto max-w-screen-xl *:text-center `}>
           
           <div className="absolute top-8 right-8" onClick={toggleMenu}>
           <button className="text-white focus:outline-none relative scale-x-[-1] w-6 h-6 z-50">
