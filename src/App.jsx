@@ -15,6 +15,8 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
 import './App.css'
 import Navbar from './components/Navbar'
 import { faGoogleDrive } from '@fortawesome/free-brands-svg-icons/faGoogleDrive'
+import { faArrowDownUpAcrossLine } from '@fortawesome/free-solid-svg-icons/faArrowDownUpAcrossLine'
+import { faArrowAltCircleDown } from '@fortawesome/free-solid-svg-icons/faArrowAltCircleDown'
 
 function App() {
   
@@ -167,31 +169,31 @@ function App() {
         <div className='grid md:px-10 lg:px-20 pb-20 grid-cols-2 md:grid-cols-3 lg:grid-cols-3 gap-2 *:cursor-pointer *:border-slate-700 *:border-[1px] '>
         
         <div className='p-5 flex justify-center items-center bg-[#050e23] duration-300 hover:bg-[#091328]'>
-          <p className='font-bold mt-5 gap-4 flex'> <FontAwesomeIcon icon={faReact} className="text-white text-3xl" /> React.js</p>
+          <p className='font-bold gap-4 flex text-[13px] md:text-base lg:text-base'> <FontAwesomeIcon icon={faReact} className="text-white text-2xl" /> React.js</p>
         </div> 
 
         <div className='p-5 flex justify-center items-center bg-[#050e23] duration-300 hover:bg-[#091328]'>
-        <p className='font-bold mt-5 gap-4 flex '> <FontAwesomeIcon icon={faNodeJs} className="text-white text-3xl" />Node.js</p>
+        <p className='font-bold gap-4 flex text-[13px] md:text-base lg:text-base'> <FontAwesomeIcon icon={faNodeJs} className="text-white text-2xl" />Node.js</p>
         </div>
 
         <div className='p-5 flex justify-center items-center bg-[#050e23] duration-300 hover:bg-[#091328]'>
-        <p className='font-bold mt-5 gap-4 flex'> <svg role="img" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" id="Tailwindcss--Streamline-Simple-Icons" ><desc>{"Tailwindcss Streamline Icon: https://streamlinehq.com"}</desc><title>{"Tailwind CSS"}</title><path d="M12.001 4.8c-3.2 0 -5.2 1.6 -6 4.8 1.2 -1.6 2.6 -2.2 4.2 -1.8 0.913 0.228 1.565 0.89 2.288 1.624C13.666 10.618 15.027 12 18.001 12c3.2 0 5.2 -1.6 6 -4.8 -1.2 1.6 -2.6 2.2 -4.2 1.8 -0.913 -0.228 -1.565 -0.89 -2.288 -1.624C16.337 6.182 14.976 4.8 12.001 4.8zm-6 7.2c-3.2 0 -5.2 1.6 -6 4.8 1.2 -1.6 2.6 -2.2 4.2 -1.8 0.913 0.228 1.565 0.89 2.288 1.624 1.177 1.194 2.538 2.576 5.512 2.576 3.2 0 5.2 -1.6 6 -4.8 -1.2 1.6 -2.6 2.2 -4.2 1.8 -0.913 -0.228 -1.565 -0.89 -2.288 -1.624C10.337 13.382 8.976 12 6.001 12z" fill="currentColor" strokeWidth={1} /></svg>TailwindCSS</p>
+        <p className='font-bold gap-4 flex text-[13px] md:text-base lg:text-base'> <svg role="img" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" id="Tailwindcss--Streamline-Simple-Icons" ><desc>{"Tailwindcss Streamline Icon: https://streamlinehq.com"}</desc><title>{"Tailwind CSS"}</title><path d="M12.001 4.8c-3.2 0 -5.2 1.6 -6 4.8 1.2 -1.6 2.6 -2.2 4.2 -1.8 0.913 0.228 1.565 0.89 2.288 1.624C13.666 10.618 15.027 12 18.001 12c3.2 0 5.2 -1.6 6 -4.8 -1.2 1.6 -2.6 2.2 -4.2 1.8 -0.913 -0.228 -1.565 -0.89 -2.288 -1.624C16.337 6.182 14.976 4.8 12.001 4.8zm-6 7.2c-3.2 0 -5.2 1.6 -6 4.8 1.2 -1.6 2.6 -2.2 4.2 -1.8 0.913 0.228 1.565 0.89 2.288 1.624 1.177 1.194 2.538 2.576 5.512 2.576 3.2 0 5.2 -1.6 6 -4.8 -1.2 1.6 -2.6 2.2 -4.2 1.8 -0.913 -0.228 -1.565 -0.89 -2.288 -1.624C10.337 13.382 8.976 12 6.001 12z" fill="currentColor" strokeWidth={1} /></svg>TailwindCSS</p>
         </div>
 
         <div className='p-5 flex justify-center items-center bg-[#050e23] duration-300 hover:bg-[#091328]'>
-        <p className='font-bold mt-5 gap-4 flex'> <FontAwesomeIcon icon={faJs} className="text-white text-3xl" />JavaScript</p>
+        <p className='font-bold gap-4 flex text-[13px] md:text-base lg:text-base'> <FontAwesomeIcon icon={faJs} className="text-white text-2xl" />JavaScript</p>
         </div>
 
         <div className='p-5 flex justify-center items-center bg-[#050e23] duration-300 hover:bg-[#091328]'>
-        <p className='font-bold mt-5 gap-4 flex'> <FontAwesomeIcon icon={faCss} className="text-white text-3xl" />CSS</p>
+        <p className='font-bold gap-4 flex text-[13px] md:text-base lg:text-base'> <FontAwesomeIcon icon={faCss} className="text-white text-2xl" />CSS</p>
         </div>
 
         <div className='p-5 flex justify-center items-center bg-[#050e23] duration-300 hover:bg-[#091328]'>
-        <p className='font-bold mt-5 gap-4 flex justify-center '> <FontAwesomeIcon icon={faFigma} className="text-white text-3xl" />Figma</p>
+        <p className='font-bold gap-4 flex justify-center text-[13px] md:text-base lg:text-base'> <FontAwesomeIcon icon={faFigma} className="text-white text-2xl" />Figma</p>
         </div>
 
         <div className='p-5 flex justify-center items-center bg-[#050e23] duration-300 hover:bg-[#091328]'>
-        <p className='font-bold mt-5 gap-4 flex justify-center items-center'><img src={nextjs} alt="" /> Next.js</p>
+        <p className='font-bold gap-4 flex justify-center items-center text-[13px] md:text-base lg:text-base'><img src={nextjs} alt="" className='w-auto h-7' /> Next.js</p>
         </div>
 
         </div>
