@@ -86,6 +86,7 @@ function Navbar() {
           <a href="#skills" className="md:block  font-bold p-1 hover:text-[#48daf7] rounded-md  duration-300 text-xl " onClick={closeMenu} title='Gallery'>Tech Stack</a>
           <a href="#reviews" className="md:block  font-bold p-1 hover:text-[#48daf7] rounded-md duration-300 text-xl " onClick={closeMenu} title='Testimonial'>Reviews</a>
           <a href="#contact" className="md:block  font-bold p-1 hover:text-[#48daf7] rounded-md  duration-300 text-xl " onClick={closeMenu} title='Contact Us'>Contact Me</a>
+            <button className='p-2 text-xl mx-16 mt-11 font-bold bg-[#48daf7] text-[#040a17] rounded-md'>Hire me</button>
       </div>
 
       
