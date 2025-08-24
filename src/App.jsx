@@ -9,6 +9,7 @@ import projectThree from './assets/images/eltronc.png'
 import projectFour from './assets/images/akar.png'
 import city from './assets/images/manchester-city.svg'
 import nextjs from './assets/images/nextjs.svg'
+import tailwindcss from './assets/images/tailwind-css-svgrepo-com.svg'
 import {faEnvelope, faFilePdf, } from "@fortawesome/free-solid-svg-icons";
 import { faBehanceSquare, faCss, faFigma, faGithub, faInstagram, faInstagramSquare, faJs, faLinkedin, faNodeJs, faReact, faUpwork, faXTwitter } from "@fortawesome/free-brands-svg-icons"
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
@@ -177,7 +178,7 @@ function App() {
         </div>
 
         <div className='p-5 flex justify-center items-center bg-[#050e23] duration-300 hover:bg-[#091328]'>
-        <p className='font-bold gap-4 flex text-[13px] md:text-base lg:text-base'> <svg role="img" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" id="Tailwindcss--Streamline-Simple-Icons" ><desc>{"Tailwindcss Streamline Icon: https://streamlinehq.com"}</desc><title>{"Tailwind CSS"}</title><path d="M12.001 4.8c-3.2 0 -5.2 1.6 -6 4.8 1.2 -1.6 2.6 -2.2 4.2 -1.8 0.913 0.228 1.565 0.89 2.288 1.624C13.666 10.618 15.027 12 18.001 12c3.2 0 5.2 -1.6 6 -4.8 -1.2 1.6 -2.6 2.2 -4.2 1.8 -0.913 -0.228 -1.565 -0.89 -2.288 -1.624C16.337 6.182 14.976 4.8 12.001 4.8zm-6 7.2c-3.2 0 -5.2 1.6 -6 4.8 1.2 -1.6 2.6 -2.2 4.2 -1.8 0.913 0.228 1.565 0.89 2.288 1.624 1.177 1.194 2.538 2.576 5.512 2.576 3.2 0 5.2 -1.6 6 -4.8 -1.2 1.6 -2.6 2.2 -4.2 1.8 -0.913 -0.228 -1.565 -0.89 -2.288 -1.624C10.337 13.382 8.976 12 6.001 12z" fill="currentColor" strokeWidth={1} /></svg>TailwindCSS</p>
+        <p className='font-bold gap-4 flex text-[13px] md:text-base lg:text-base'> <img src={tailwindcss} alt="" className='w-auto h-7' />TailwindCSS</p>
         </div>
 
         <div className='p-5 flex justify-center items-center bg-[#050e23] duration-300 hover:bg-[#091328]'>
