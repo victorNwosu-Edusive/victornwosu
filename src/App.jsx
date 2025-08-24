@@ -56,7 +56,7 @@ function App() {
 
         </div>
         
-        <div className='p-11 pt-36 md:p-20 lg:p-20'>
+        <div id='about-me' className='p-11 pt-36 md:p-20 lg:p-20'>
           <div className='grid md:grid-cols-2 lg:grid-cols-2 md:gap-3 lg:gap-3 gap-8'>
             <div>
             <h1 className='text-2xl md:text-4xl lg:text-4xl font-bold'>About me</h1>
@@ -85,7 +85,7 @@ function App() {
         </div>
 
         
-        <div className='p-11 pt-36 md:p-20 lg:p-20'>
+        <div id='projects' className='p-11 pt-36 md:p-20 lg:p-20'>
         <h1 className='text-2xl font-bold'>Projects</h1>
         <p className='text-sm text-slate-300 mb-20'>Take a look at my projects and past works and see what resonates with you.</p>
         <div className='grid md:grid-cols-3 lg:grid-cols-3 gap-8'>
@@ -164,7 +164,7 @@ function App() {
         </div>
 
 
-        <div className='p-11 pt-36 md:p-20 lg:p-20'>
+        <div id='skills' className='p-11 pt-36 md:p-20 lg:p-20'>
         <h1 className='text-2xl font-bold mb-8'>Skills & Tech Stack</h1>
         </div>
         <div className='grid md:px-10 lg:px-20 pb-20 grid-cols-2 md:grid-cols-3 lg:grid-cols-3 gap-2 *:cursor-pointer *:border-slate-700 *:border-[1px] '>
@@ -199,7 +199,7 @@ function App() {
 
         </div>
 
-        <div className='p-11 pt-36 md:p-20 lg:p-20'>
+        <div id='reviews' className='p-11 pt-36 md:p-20 lg:p-20'>
         <h1 className='text-2xl font-bold'>Process</h1>
         <p className='text-sm text-slate-300 mb-20'>I use the Agile model of development</p>
         <div className='grid md:grid-cols-3 lg:grid-cols-3 gap-7'>
@@ -257,7 +257,7 @@ function App() {
 
         </div>
 
-        <footer className='bg-[#050e1b] p-11 text-center'>
+        <footer id='contact' className='bg-[#050e1b] p-11 text-center'>
           <h1 className='text-3xl font-bold mb-6'><span className='italic'>Connect</span> with me</h1>
           <div className='grid grid-cols-1 md:flex lg:flex md:justify-center lg:justify-center gap-3 mb-12'>
             <div className='flex gap-3 items-center'>
