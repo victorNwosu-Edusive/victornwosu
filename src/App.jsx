@@ -38,7 +38,7 @@ function App() {
         <FontAwesomeIcon icon={faGithub} className="text-white text-xl" />
         <FontAwesomeIcon icon={faUpwork} className="text-white text-xl" />
         </div>
-        <button className='px-7 py-1 border-[1px] bg-[#07122b] border-slate-600 rounded-md mt-8 hover:text-[#48daf7] duration-300 flex gap-3 hover:gap-5'>Hire me <p>&#8594;</p> </button>
+        <button className='px-7 text-[12px] font-[500] py-1 border-[1px] bg-transparent border-slate-600 rounded-md mt-8 hover:text-[#48daf7] duration-300 flex gap-3 hover:gap-5'>Hire me <p>&#8594;</p> </button>
         </div>
 
         <div>
@@ -48,7 +48,7 @@ function App() {
         </div>
         </div>
 
-        <div className='p-4 bg-gradient-to-r from-[#2fcde1] to-[#062b47] mx-7'>
+        <div className='p-4 mx-7'>
           <div className='flex gap-3 items-center'>
             <a className='bg-transparent border-[1.5px] cursor-pointer hover:bg-white/25 duration-300 text-sm border-white rounded-md px-6 p-2 flex gap-3 justify-center items-center' href='https://drive.google.com/file/d/1GTossPASvljVXiBq0-xUsskL6OtUq03F/view?usp=drivesdk'><FontAwesomeIcon icon={faGoogleDrive} className="text-white text-sm" /> Download Resume</a>
             <p>&#10229;</p>

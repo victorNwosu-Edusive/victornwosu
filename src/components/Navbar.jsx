@@ -78,16 +78,16 @@ function Navbar() {
       </div>
 
       {[
-      { href: "#about-me", label: "About Me", title: "About Us" },
+      { href: "#about-me", label: "About me", title: "About Us" },
       { href: "#projects", label: "Projects", title: "Features" },
       { href: "#skills", label: "Tech Stack", title: "Gallery" },
       { href: "#reviews", label: "Reviews", title: "Testimonial" },
-      { href: "#contact", label: "Contact Me", title: "Contact Us" },
+      { href: "#contact", label: "Contact", title: "Contact Us" },
       ].map((link, idx) => (
       <a
       key={link.href}
       href={link.href}
-      className={`md:block font-bold p-2 hover:text-[#48daf7] rounded-md duration-500 text-[17px] transition-all
+      className={`md:block font-[600] p-2 hover:text-[#48daf7] rounded-md duration-500 text-[16px] transition-all
         ${isOpen ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'}
       `}
       style={{
@@ -101,7 +101,7 @@ function Navbar() {
       ))}
 
       <button
-      className={`p-2 text-[13px] mx-16 mt-11 font-bold tracking-widest bg-[#48daf7] text-[#040a17] rounded-md flex justify-center items-center gap-3 transition-all
+      className={`p-2 text-[13px] mx-16 mt-11 font-bold tracking-widest border-[1px] border-white text-white rounded-md flex justify-center items-center gap-3 transition-all
       ${isOpen ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'}
       `}
       style={{
@@ -109,7 +109,7 @@ function Navbar() {
       }}
       onClick={closeMenu}
       >
-      HIRE ME <FontAwesomeIcon icon={faRocket} className="text-[#040a17] text-[15px]" />
+      HIRE ME 
       </button>
       </div>
     </>
