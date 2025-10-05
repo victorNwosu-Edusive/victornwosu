@@ -37,8 +37,8 @@ function App() {
           interfaces that bring ideas to life.</p>
         
         <div className='flex gap-2 '>
-        <button className='px-5 text-[11px] font-[500] text-green-200 py-1 bg-green-800/40 border-[1px] border-green-400/40 rounded-full mt-8 duration-300 flex items-center justify-center gap-2'><div className='h-2 w-2 rounded-full bg-green-300 flex justify-center items-center'><div className='relative h-2 w-2 rounded-full bg-green-300 animate-ping'></div></div>Available for work </button>
-        <button className='px-7 text-[13px] font-[500] py-1 border-[1px] bg-transparent border-slate-600 rounded-md mt-8 hover:text-[#48daf7] duration-300 flex gap-3 hover:gap-5 items-center'><FontAwesomeIcon icon={faGithub} className="text-white text-sm" /> Github <p>&#8594;</p> </button>
+        <button className='px-4 text-[11px] font-[500] text-green-200 py-1 bg-green-800/40 border-[1px] border-green-400/40 rounded-full mt-8 duration-300 flex items-center justify-center gap-2'><div className='h-2 w-2 rounded-full bg-green-300 flex justify-center items-center'><div className='relative h-2 w-2 rounded-full bg-green-300 animate-ping'></div></div>Available for work </button>
+        <button className='px-4 text-[13px] font-[500] py-1 border-[1px] bg-transparent border-slate-600 rounded-md mt-8 hover:text-[#48daf7] duration-300 flex gap-3 hover:gap-5 items-center'><FontAwesomeIcon icon={faGithub} className="text-white text-sm" /> Github <p>&#8594;</p> </button>
         </div>
         </div>
 
