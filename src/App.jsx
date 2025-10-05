@@ -11,13 +11,14 @@ import city from './assets/images/manchester-city.svg'
 import nextjs from './assets/images/nextjs.svg'
 import tailwindcss from './assets/images/tailwind-css-svgrepo-com.svg'
 import {faEnvelope, faFilePdf, } from "@fortawesome/free-solid-svg-icons";
-import { faBehanceSquare, faCss, faFigma, faGithub, faInstagram, faInstagramSquare, faJs, faLinkedin, faNodeJs, faReact, faUpwork, faXTwitter } from "@fortawesome/free-brands-svg-icons"
+import { faBehanceSquare, faCss, faFigma, faGithub, faGithubAlt, faGithubSquare, faInstagram, faInstagramSquare, faJs, faLinkedin, faNodeJs, faReact, faUpwork, faXTwitter } from "@fortawesome/free-brands-svg-icons"
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
 import './App.css'
 import Navbar from './components/Navbar'
 import { faGoogleDrive } from '@fortawesome/free-brands-svg-icons/faGoogleDrive'
 import { faArrowDownUpAcrossLine } from '@fortawesome/free-solid-svg-icons/faArrowDownUpAcrossLine'
 import { faArrowAltCircleDown } from '@fortawesome/free-solid-svg-icons/faArrowAltCircleDown'
+
 
 function App() {
   
@@ -35,7 +36,10 @@ function App() {
         <p className='text-[15px] mt-5 mb-8'>I build modern, responsive, and user-focused web 
           interfaces that bring ideas to life.</p>
         
-        <button className='px-7 text-[13px] font-[500] py-1 border-[1px] bg-transparent border-slate-600 rounded-md mt-8 hover:text-[#48daf7] duration-300 flex gap-3 hover:gap-5'>Hire me <p>&#8594;</p> </button>
+        <div className='flex gap-2 '>
+        <button className='px-5 text-[11px] font-[500] text-green-200 py-1 bg-green-800/40 border-[1px] border-green-400/40 rounded-full mt-8 duration-300 flex items-center justify-center gap-2'><div className='h-2 w-2 rounded-full bg-green-300 flex justify-center items-center'><div className='relative h-2 w-2 rounded-full bg-green-300 animate-ping'></div></div>Available for work </button>
+        <button className='px-7 text-[13px] font-[500] py-1 border-[1px] bg-transparent border-slate-600 rounded-md mt-8 hover:text-[#48daf7] duration-300 flex gap-3 hover:gap-5 items-center'><FontAwesomeIcon icon={faGithub} className="text-white text-sm" /> Github <p>&#8594;</p> </button>
+        </div>
         </div>
 
         <div>
@@ -84,7 +88,7 @@ function App() {
         <h1 className='text-2xl font-bold'>Projects</h1>
         <p className='text-sm text-slate-300 mb-20'>Take a look at my projects and past works and see what resonates with you.</p>
         <div className='grid md:grid-cols-3 lg:grid-cols-3 gap-8'>
-        <div className='bg-[#050e23] border-[1px] border-slate-600 rounded-2xl'>
+        <div className='bg-[#050e23] border-[1px] border-slate-600 rounded-2xl overflow-hidden'>
           <img src={projectOne} alt="" className='object-cover duration-300 h-60 w-auto' />
           <div className='p-4'>
           <p className='font-bold mt-5 mb-5 cursor-pointer hover:text-[#48daf7] duration-300'>Top Recipe Book</p>
@@ -102,7 +106,7 @@ function App() {
 
         </div>
 
-        <div className='bg-[#050e23] border-[1px] border-slate-600 rounded-2xl'>
+        <div className='bg-[#050e23] border-[1px] border-slate-600 rounded-2xl overflow-hidden'>
           <img src={projectThree} alt="" className='object-cover duration-300 h-60 w-auto' />
           <div className='p-4'>
           <p className='font-bold mt-5 mb-5 cursor-pointer hover:text-[#48daf7] duration-300'>Eltroncs</p>
@@ -120,7 +124,7 @@ function App() {
 
         </div>
 
-        <div className='bg-[#050e23] border-[1px] border-slate-600 rounded-2xl'>
+        <div className='bg-[#050e23] border-[1px] border-slate-600 rounded-2xl overflow-hidden'>
           <img src={projectFour} alt="" className='object-cover duration-300 h-60 w-auto' />
           <div className='p-4'>
           <p className='font-bold mt-5 mb-5 cursor-pointer hover:text-[#48daf7] duration-300'>Akar Estates</p>
@@ -139,7 +143,7 @@ function App() {
         </div>
 
 
-        <div className='bg-[#050e23] border-[1px] border-slate-600 rounded-2xl'>
+        <div className='bg-[#050e23] border-[1px] border-slate-600 rounded-2xl overflow-hidden'>
         <img src={projectTwo} alt="" className='object-cover h-60 w-auto' />
         <div className='p-4'>
         <p className='font-bold mt-5 mb-5 cursor-pointer hover:text-[#48daf7] duration-300'>Explore Nigeria</p>
