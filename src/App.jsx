@@ -34,12 +34,8 @@ function App() {
         <p className='text-[16px] font-bold md:text-2xl lg:text-2xl'>Frontend Web Developer</p>
         <p className='text-[15px] mt-5 mb-8'>I build modern, responsive, and user-focused web 
           interfaces that bring ideas to life.</p>
-        <div className='flex gap-3'>
-        <FontAwesomeIcon icon={faLinkedin} className="text-white text-xl" />
-        <FontAwesomeIcon icon={faGithub} className="text-white text-xl" />
-        <FontAwesomeIcon icon={faUpwork} className="text-white text-xl" />
-        </div>
-        <button className='px-7 text-[12px] font-[500] py-1 border-[1px] bg-transparent border-slate-600 rounded-md mt-8 hover:text-[#48daf7] duration-300 flex gap-3 hover:gap-5'>Hire me <p>&#8594;</p> </button>
+        
+        <button className='px-7 text-[13px] font-[500] py-1 border-[1px] bg-transparent border-slate-600 rounded-md mt-8 hover:text-[#48daf7] duration-300 flex gap-3 hover:gap-5'>Hire me <p>&#8594;</p> </button>
         </div>
 
         <div>
@@ -63,11 +59,9 @@ function App() {
             <h1 className='text-2xl md:text-4xl lg:text-4xl font-bold'>About me</h1>
             <p className='text-base text-slate-300'>Get to know me</p>
               <p className='text-[14px] mt-5'>
-              I'm Victor, I'm a Tech enthusiast, a visionary, a Christian, a Frontend 
-              Web Developer (mentored and self-taught) and a Visual designer. I also love football (a City fan btw) and Fashion. I always strive to do things conscientiously and 
-              continuously work on becoming better at everything I do. I'm skilled in UI design and work with various programming languages, 
-              libraries, and frameworks to create seamless and responsive web applications. I'm open to connections 
-              and Tech opportunities.
+              I'm Victor, a Computer Science graduate, a visionary, a Frontend 
+              Web Developer (mentored and self-taught) and a Visual designer with 6+ years of experience working with various programming languages, libraries and frameworks. I always strive to do things conscientiously and 
+              continuously work on improving at everything I do. I'm open to connections and Tech opportunities.
               </p>
 
                 {/*<h1 className='font-bold mt-6 mb-2'>Interests:</h1>
@@ -261,25 +255,18 @@ function App() {
         <footer id='contact' className='bg-[#050e1b] p-11 text-center'>
           <h1 className='text-3xl font-bold mb-6'><span className='italic'>Connect</span> with me</h1>
           <div className='grid grid-cols-1 md:flex lg:flex md:justify-center lg:justify-center gap-3 mb-12'>
-            <div className='flex gap-3 items-center'>
-          <FontAwesomeIcon icon={faEnvelope} className="text-white text-xl" /> <p className='text-sm'>nwosuuvictor@gmail.com</p>
-            </div>
-
-            <div className='flex gap-3 items-center'>
-          <FontAwesomeIcon icon={faXTwitter} className="text-white text-xl" /> <p className='text-sm'>@only_one_victor</p>
-            </div>
-
-            <div className='flex gap-3 items-center'>
-          <FontAwesomeIcon icon={faLinkedin} className="text-white text-xl" /> <p className='text-sm'>victor-nwosu</p>
-            </div>
-
-            <div className='flex gap-3 items-center'>
-          <FontAwesomeIcon icon={faInstagram} className="text-white text-xl" /> <p className='text-sm'>@nwosuuvictor</p>
-            </div>
-
+            <div className='flex border-[1px] border-slate-900 p-2 gap-3 items-center justify-center'>
+          <FontAwesomeIcon icon={faEnvelope} className="text-white text-xl" /> 
+          <FontAwesomeIcon icon={faXTwitter} className="text-white text-xl" /> 
+          <FontAwesomeIcon icon={faLinkedin} className="text-white text-xl" /> 
+          <FontAwesomeIcon icon={faInstagram} className="text-white text-xl" /> 
+          </div>
           </div>
 
-          <p className='text-[12px] text-center'>Developed by Victor-Nwosu</p>
+          <div className='flex justify-between'>
+          <p className='text-[12px]'>Developed by Victor-Nwosu</p>
+          <p className='text-[12px]'> © {new Date().getFullYear()}</p>
+          </div>
         </footer>
 
         
