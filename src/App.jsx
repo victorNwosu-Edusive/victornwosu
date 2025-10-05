@@ -31,8 +31,9 @@ function App() {
             <div>
             <h1 className='text-[13px] md:text-[14px] lg:text-[14px] text-[#48daf7] tracking-widest font-bold mb-4'>HELLO WORLD!</h1>
           <h1 className='text-3xl md:text-4xl lg:text-4xl'>I'm <span className='font-bold'>Victor Nwosu</span></h1>
-        <p className='text-[17px] md:text-2xl lg:text-2xl'>Frontend Web Developer</p>
-        <p className='text-sm mt-2 mb-8'>Creator  .  Tech Enthusiast</p>
+        <p className='text-[16px] font-bold md:text-2xl lg:text-2xl'>Frontend Web Developer</p>
+        <p className='text-[15px] mt-5 mb-8'>I build modern, responsive, and user-focused web 
+          interfaces that bring ideas to life.</p>
         <div className='flex gap-3'>
         <FontAwesomeIcon icon={faLinkedin} className="text-white text-xl" />
         <FontAwesomeIcon icon={faGithub} className="text-white text-xl" />
