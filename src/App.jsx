@@ -15,7 +15,7 @@ import { faBehanceSquare, faCss, faFigma, faGithub, faGithubAlt, faGithubSquare,
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
 import './App.css'
 import Navbar from './components/Navbar'
-import { faGoogleDrive } from '@fortawesome/free-brands-svg-icons/faGoogleDrive'
+import BackToTop from './components/BackToTop'
 
 function App() {
 
@@ -267,10 +267,10 @@ function App() {
           <h1 className='text-3xl font-bold mb-6'><span className='italic'>Connect</span> with me</h1>
           <div className='grid grid-cols-1 md:flex lg:flex md:justify-center lg:justify-center gap-3 mb-12'>
             <div className='flex border-[1px] border-slate-900 p-2 gap-3 items-center justify-center'>
-          <FontAwesomeIcon icon={faEnvelope} className="text-white text-xl" /> 
-          <FontAwesomeIcon icon={faXTwitter} className="text-white text-xl" /> 
-          <FontAwesomeIcon icon={faLinkedin} className="text-white text-xl" /> 
-          <FontAwesomeIcon icon={faInstagram} className="text-white text-xl" /> 
+          <a href="mailto:nwosuuvictor@gmail.com"><FontAwesomeIcon icon={faEnvelope} className="text-white text-xl" /></a>
+          <a href="https://twitter.com/only_one_victor"><FontAwesomeIcon icon={faXTwitter} className="text-white text-xl" /></a>
+          <a href="https://www.linkedin.com/in/victor-nwosu/"><FontAwesomeIcon icon={faLinkedin} className="text-white text-xl" /></a>
+          <a href="https://www.instagram.com/nwosuuvictor"><FontAwesomeIcon icon={faInstagram} className="text-white text-xl" /></a>
           </div>
           </div>
 
@@ -278,6 +278,7 @@ function App() {
           <p className='text-[12px]'>Developed by Victor-Nwosu</p>
           <p className='text-[12px]'> © {new Date().getFullYear()}</p>
           </div>
+          <BackToTop />
         </footer>
 
         
