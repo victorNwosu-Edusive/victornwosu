@@ -16,9 +16,6 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
 import './App.css'
 import Navbar from './components/Navbar'
 import { faGoogleDrive } from '@fortawesome/free-brands-svg-icons/faGoogleDrive'
-import { faArrowDownUpAcrossLine } from '@fortawesome/free-solid-svg-icons/faArrowDownUpAcrossLine'
-import { faArrowAltCircleDown } from '@fortawesome/free-solid-svg-icons/faArrowAltCircleDown'
-
 
 function App() {
   
@@ -37,8 +34,8 @@ function App() {
           interfaces that bring ideas to life.</p>
         
         <div className='flex gap-2 '>
-        <button className='px-3 text-[11px] font-[500] text-green-200 py-1 bg-green-800/40 border-[1px] border-green-400/40 rounded-full mt-8 duration-300 flex items-center justify-center gap-2'><div className='h-2 w-2 rounded-full bg-green-300 flex justify-center items-center'><div className='relative h-2 w-2 rounded-full bg-green-300 animate-ping'></div></div>Available for work </button>
-        <button className='px-3 text-[13px] font-[500] py-1 border-[1px] bg-transparent border-slate-600 rounded-md mt-8 hover:text-[#48daf7] duration-300 flex gap-3 hover:gap-5 items-center'><FontAwesomeIcon icon={faGithub} className="text-white text-sm" /> Github <p>&#8594;</p> </button>
+        <button className='px-3 text-[11px] font-[500] text-green-200 py-1 bg-green-800/40 rounded-full mt-8 duration-300 flex items-center justify-center gap-2'><div className='h-2 w-2 rounded-full bg-green-300 flex justify-center items-center'><div className='relative h-2 w-2 rounded-full bg-green-300 animate-ping'></div></div>Available for work </button>
+        <button className='px-3 text-[10px] tracking-[0.25em] font-bold py-1 border-[1px] bg-transparent border-slate-600 rounded-md mt-8 hover:text-[#48daf7] duration-300 flex gap-3 items-center'><FontAwesomeIcon icon={faGithub} className="text-white text-sm" /> GITHUB <p>&#10095;</p> </button>
         </div>
         </div>
 
@@ -164,39 +161,41 @@ function App() {
 
 
         <div id='skills' className='p-11 pt-36 md:p-20 lg:p-20'>
-        <h1 className='text-2xl font-bold mb-8'>Skills & Tech Stack</h1>
+        <h1 className='text-2xl font-bold mb-4'>Skills & Tech Stack</h1>
         </div>
-        <div className='grid md:px-10 lg:px-20 pb-20 grid-cols-2 md:grid-cols-3 lg:grid-cols-3 gap-2 *:cursor-pointer *:border-slate-700 *:border-[1px] '>
+        <marquee behavior="" direction="">
+        <div className='flex gap-6 *:cursor-pointer'>
         
-        <div className='p-5 flex justify-center items-center bg-[#050e23] duration-300 hover:bg-[#091328]'>
-          <p className='font-bold gap-4 flex text-[13px] md:text-base lg:text-base'> <FontAwesomeIcon icon={faReact} className="text-white text-2xl" /> React.js</p>
+        <div className='p-2 px-3 flex justify-center items-center bg-[#050e23] duration-300 hover:bg-[#091328]'>
+        <FontAwesomeIcon icon={faReact} className="text-white text-2xl" />
         </div> 
 
-        <div className='p-5 flex justify-center items-center bg-[#050e23] duration-300 hover:bg-[#091328]'>
-        <p className='font-bold gap-4 flex text-[13px] md:text-base lg:text-base'> <FontAwesomeIcon icon={faNodeJs} className="text-white text-2xl" />Node.js</p>
+        <div className='p-2 px-3 flex justify-center items-center bg-[#050e23] duration-300 hover:bg-[#091328]'>
+        <FontAwesomeIcon icon={faNodeJs} className="text-white text-2xl" />
         </div>
 
-        <div className='p-5 flex justify-center items-center bg-[#050e23] duration-300 hover:bg-[#091328]'>
-        <p className='font-bold gap-4 flex text-[13px] md:text-base lg:text-base'> <img src={tailwindcss} alt="" className='w-auto h-7' />TailwindCSS</p>
+        <div className='p-2 px-3 flex justify-center items-center bg-[#050e23] duration-300 hover:bg-[#091328]'>
+        <img src={tailwindcss} alt="" className='w-auto h-7' />
         </div>
 
-        <div className='p-5 flex justify-center items-center bg-[#050e23] duration-300 hover:bg-[#091328]'>
-        <p className='font-bold gap-4 flex text-[13px] md:text-base lg:text-base'> <FontAwesomeIcon icon={faJs} className="text-white text-2xl" />JavaScript</p>
+        <div className='p-2 px-3 flex justify-center items-center bg-[#050e23] duration-300 hover:bg-[#091328]'>
+        <FontAwesomeIcon icon={faJs} className="text-white text-2xl" />
         </div>
 
-        <div className='p-5 flex justify-center items-center bg-[#050e23] duration-300 hover:bg-[#091328]'>
-        <p className='font-bold gap-4 flex text-[13px] md:text-base lg:text-base'> <FontAwesomeIcon icon={faCss} className="text-white text-2xl" />CSS</p>
+        <div className='p-2 px-3 flex justify-center items-center bg-[#050e23] duration-300 hover:bg-[#091328]'>
+        <FontAwesomeIcon icon={faCss} className="text-white text-2xl" />
         </div>
 
-        <div className='p-5 flex justify-center items-center bg-[#050e23] duration-300 hover:bg-[#091328]'>
-        <p className='font-bold gap-4 flex justify-center text-[13px] md:text-base lg:text-base'> <FontAwesomeIcon icon={faFigma} className="text-white text-2xl" />Figma</p>
+        <div className='p-2 px-3 flex justify-center items-center bg-[#050e23] duration-300 hover:bg-[#091328]'>
+        <FontAwesomeIcon icon={faFigma} className="text-white text-2xl" />
         </div>
 
-        <div className='p-5 flex justify-center items-center bg-[#050e23] duration-300 hover:bg-[#091328]'>
-        <p className='font-bold gap-4 flex justify-center items-center text-[13px] md:text-base lg:text-base'><img src={nextjs} alt="" className='w-auto h-7' /> Next.js</p>
+        <div className='p-2 px-3 flex justify-center items-center bg-[#050e23] duration-300 hover:bg-[#091328]'>
+        <img src={nextjs} alt="" className='w-auto h-9' />
         </div>
 
         </div>
+        </marquee>
 
         <div id='reviews' className='p-11 pt-36 md:p-20 lg:p-20'>
         <h1 className='text-2xl font-bold'>Process</h1>
