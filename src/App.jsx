@@ -10,7 +10,7 @@ import projectFour from './assets/images/akar.png'
 import city from './assets/images/manchester-city.svg'
 import nextjs from './assets/images/nextjs.svg'
 import tailwindcss from './assets/images/tailwind-css-svgrepo-com.svg'
-import {faEnvelope, faFilePdf, } from "@fortawesome/free-solid-svg-icons";
+import {faEnvelope, faFile, faFileAlt, faFilePdf, } from "@fortawesome/free-solid-svg-icons";
 import { faBehanceSquare, faCss, faFigma, faGithub, faGithubAlt, faGithubSquare, faInstagram, faInstagramSquare, faJs, faLinkedin, faNodeJs, faReact, faUpwork, faXTwitter } from "@fortawesome/free-brands-svg-icons"
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
 import './App.css'
@@ -18,12 +18,16 @@ import Navbar from './components/Navbar'
 import { faGoogleDrive } from '@fortawesome/free-brands-svg-icons/faGoogleDrive'
 
 function App() {
+
+  const handleClick = () => {
+    window.open("https://github.com/victorNwosu-Edusive", "_blank");
+  };
   
   return (
     <>
     <Navbar />
       <div className='bg-[#040a17] h-auto text-white'>
-        <div className='p-11 pt-40 pb-48 md:pt-40 lg:pt-40 md:p-44 lg:p-44'>
+        <div className='p-11 pt-40 pb-11 md:pt-40 lg:pt-40 md:p-44 lg:p-44'>
           <div className='grid gap-10 md:gap-4 lg:gap-4 md:grid-cols-2 lg:grid-cols-2'>
 
             <div>
@@ -35,7 +39,7 @@ function App() {
         
         <div className='flex gap-2 '>
         <button className='px-3 text-[11px] font-[500] text-green-200 py-1 bg-green-800/40 rounded-full mt-8 duration-300 flex items-center justify-center gap-2'><div className='h-2 w-2 rounded-full bg-green-300 flex justify-center items-center'><div className='relative h-2 w-2 rounded-full bg-green-300 animate-ping'></div></div>Available for work </button>
-        <button className='px-3 text-[10px] tracking-[0.25em] font-bold py-1 border-[1px] bg-transparent border-slate-600 rounded-md mt-8 hover:text-[#48daf7] duration-300 flex gap-3 items-center justify-center'><FontAwesomeIcon icon={faGithub} className="text-white text-sm" /> GITHUB <p>&#10095;</p> </button>
+        <button onClick={handleClick} className='px-3 text-[10px] tracking-[0.15em] font-bold py-1 border-[1px] bg-transparent border-slate-600 rounded-md mt-8 hover:text-[#48daf7] duration-300 flex gap-3 items-center justify-center'><FontAwesomeIcon icon={faGithub} className="text-white text-sm" /> GITHUB <p>&#10095;</p> </button>
         </div>
         </div>
 
@@ -46,16 +50,11 @@ function App() {
         </div>
         </div>
 
-        <div className='p-4 mx-7'>
-          <div className='flex gap-3 items-center'>
-            <a className='bg-transparent border-[1.5px] cursor-pointer hover:bg-white/25 duration-300 text-sm border-white rounded-md px-6 p-2 flex gap-3 justify-center items-center' href='https://drive.google.com/file/d/1GTossPASvljVXiBq0-xUsskL6OtUq03F/view?usp=drivesdk'><FontAwesomeIcon icon={faGoogleDrive} className="text-white text-sm" /> Download Resume</a>
-            <p>&#10229;</p>
-          </div>
-
-        </div>
         
+         
+
         <div id='about-me' className='p-11 pt-36 md:p-20 lg:p-20'>
-          <div className='grid md:grid-cols-2 lg:grid-cols-2 md:gap-3 lg:gap-3 gap-8'>
+          <div className='grid md:grid-cols-2 lg:grid-cols-2 md:gap-6 lg:gap-6 gap-8'>
             <div>
             <h1 className='text-2xl md:text-4xl lg:text-4xl font-bold'>About me</h1>
             <p className='text-base text-slate-300'>Get to know me</p>
@@ -71,10 +70,15 @@ function App() {
                 <img src={google} alt="" className='w-10' />
                 <img src={youtube} alt="" className='w-10' />
               </div>*/}
+
+               <div className='flex gap-3 mt-9 items-center'>
+            <a className='bg-transparent border-[1.5px] font-bold tracking-[0.15em] cursor-pointer hover:bg-white/25 duration-300 text-[10px] border-white rounded-md px-6 p-2 flex gap-3 justify-center items-center' href='https://drive.google.com/file/d/1GTossPASvljVXiBq0-xUsskL6OtUq03F/view?usp=drivesdk'><FontAwesomeIcon icon={faFileAlt} className="text-white text-sm" />DOWNLOAD RESUME</a>
+          </div>
+
             </div>
 
-            <div className='flex justify-center items-center'>
-              <img src={aboutPics} alt="" className='h-96 w-auto object-cover md:object-contain lg:object-contain justify-center items-center rounded-xl ring-4 ring-[#48daf7] ring-offset-2 ring-offset-black' />
+            <div className=''>
+              <img src={aboutPics} alt="" className='h-96 w-full object-cover md:object-cover lg:object-cover justify-center items-center rounded-xl {/*ring-4 ring-[#48daf7] ring-offset-2 ring-offset-black*/}' />
             </div>
 
           </div>
@@ -86,7 +90,7 @@ function App() {
         <p className='text-sm text-slate-300 mb-20'>Take a look at my projects and past works and see what resonates with you.</p>
         <div className='grid md:grid-cols-3 lg:grid-cols-3 gap-8'>
         <div className='bg-[#050e23] border-[1px] border-slate-600 rounded-2xl overflow-hidden'>
-          <img src={projectOne} alt="" className='object-cover duration-300 h-60 w-auto' />
+          <img src={projectOne} alt="" className='object-cover duration-300 h-[199px] md:h-60 lg:h-60 w-full' />
           <div className='p-4'>
           <p className='font-bold mt-5 mb-5 cursor-pointer hover:text-[#48daf7] duration-300'>Top Recipe Book</p>
           <div className='flex items-center justify-between'>
@@ -104,7 +108,7 @@ function App() {
         </div>
 
         <div className='bg-[#050e23] border-[1px] border-slate-600 rounded-2xl overflow-hidden'>
-          <img src={projectThree} alt="" className='object-cover duration-300 h-60 w-auto' />
+          <img src={projectThree} alt="" className='object-cover duration-300 h-[199px] md:h-60 lg:h-60 w-full' />
           <div className='p-4'>
           <p className='font-bold mt-5 mb-5 cursor-pointer hover:text-[#48daf7] duration-300'>Eltroncs</p>
           <div className='flex items-center justify-between'>
@@ -122,7 +126,7 @@ function App() {
         </div>
 
         <div className='bg-[#050e23] border-[1px] border-slate-600 rounded-2xl overflow-hidden'>
-          <img src={projectFour} alt="" className='object-cover duration-300 h-60 w-auto' />
+          <img src={projectFour} alt="" className='object-cover duration-300 h-[199px] md:h-60 lg:h-60 w-full' />
           <div className='p-4'>
           <p className='font-bold mt-5 mb-5 cursor-pointer hover:text-[#48daf7] duration-300'>Akar Estates</p>
           <div className='flex items-center justify-between'>
@@ -141,7 +145,7 @@ function App() {
 
 
         <div className='bg-[#050e23] border-[1px] border-slate-600 rounded-2xl overflow-hidden'>
-        <img src={projectTwo} alt="" className='object-cover h-60 w-auto' />
+        <img src={projectTwo} alt="" className='object-cover h-[199px] md:h-60 lg:h-60 w-full' />
         <div className='p-4'>
         <p className='font-bold mt-5 mb-5 cursor-pointer hover:text-[#48daf7] duration-300'>Explore Nigeria</p>
           <div className='flex items-center justify-between'>
@@ -163,15 +167,15 @@ function App() {
         <div id='skills' className='p-11 pt-36 md:p-20 lg:p-20'>
         <h1 className='text-2xl font-bold mb-4'>Skills & Tech Stack</h1>
         </div>
-        <marquee behavior="" direction="">
-        <div className='flex gap-6 *:cursor-pointer'>
-        
+
+        <div className='grid grid-cols-2 md:grid-cols-2 lg:grid-cols-3 gap-2 cursor-pointer'>
+
         <div className='p-2 px-3 flex justify-center items-center bg-[#050e23] duration-300 hover:bg-[#091328]'>
-        <FontAwesomeIcon icon={faReact} className="text-white text-2xl" />
+        <FontAwesomeIcon icon={faReact} className="text-white text-4xl" />
         </div> 
 
         <div className='p-2 px-3 flex justify-center items-center bg-[#050e23] duration-300 hover:bg-[#091328]'>
-        <FontAwesomeIcon icon={faNodeJs} className="text-white text-2xl" />
+        <FontAwesomeIcon icon={faNodeJs} className="text-white text-4xl" />
         </div>
 
         <div className='p-2 px-3 flex justify-center items-center bg-[#050e23] duration-300 hover:bg-[#091328]'>
@@ -179,15 +183,15 @@ function App() {
         </div>
 
         <div className='p-2 px-3 flex justify-center items-center bg-[#050e23] duration-300 hover:bg-[#091328]'>
-        <FontAwesomeIcon icon={faJs} className="text-white text-2xl" />
+        <FontAwesomeIcon icon={faJs} className="text-white text-4xl" />
         </div>
 
         <div className='p-2 px-3 flex justify-center items-center bg-[#050e23] duration-300 hover:bg-[#091328]'>
-        <FontAwesomeIcon icon={faCss} className="text-white text-2xl" />
+        <FontAwesomeIcon icon={faCss} className="text-white text-4xl" />
         </div>
 
         <div className='p-2 px-3 flex justify-center items-center bg-[#050e23] duration-300 hover:bg-[#091328]'>
-        <FontAwesomeIcon icon={faFigma} className="text-white text-2xl" />
+        <FontAwesomeIcon icon={faFigma} className="text-white text-4xl" />
         </div>
 
         <div className='p-2 px-3 flex justify-center items-center bg-[#050e23] duration-300 hover:bg-[#091328]'>
@@ -195,12 +199,11 @@ function App() {
         </div>
 
         </div>
-        </marquee>
 
         <div id='reviews' className='p-11 pt-36 md:p-20 lg:p-20'>
         <h1 className='text-2xl font-bold'>Process</h1>
         <p className='text-sm text-slate-300 mb-20'>I use the Agile model of development</p>
-        <div className='grid md:grid-cols-3 lg:grid-cols-3 gap-7'>
+        <div className='grid md:grid-cols-3 lg:grid-cols-3 gap-2 md:gap-7 lg:gap-7'>
         <div className='relative bg-gradient-to-r from-[#050e23] to-[#061a47] border-[1px] border-slate-600 rounded-2xl'>
           <div className='p-9'>
           <p className='font-bold mt-5 text-2xl mb-7'>Plan</p>
@@ -208,6 +211,7 @@ function App() {
           </div>
           <h1 className='text-7xl text-[#142b60]/65 font-bold absolute bottom-0'>01</h1>
         </div>
+        <p className='block md:hidden lg:hidden text-center text-5xl'>&#8675;</p>
 
         <div className='relative bg-gradient-to-r from-[#050e23] to-[#061a47] border-[1px] border-slate-600 rounded-2xl'>
           <div className='p-9'>
@@ -216,6 +220,7 @@ function App() {
           </div>
           <h1 className='text-7xl text-[#142b60]/65 font-bold absolute bottom-0'>02</h1>
         </div>
+        <p className='block md:hidden lg:hidden text-center text-5xl'>&#8675;</p>
 
         <div className='relative bg-gradient-to-r from-[#050e23] to-[#061a47] border-[1px] border-slate-600 rounded-2xl'>
           <div className='p-9'>
@@ -224,6 +229,7 @@ function App() {
           </div>
           <h1 className='text-7xl text-[#142b60]/65 font-bold absolute bottom-0'>03</h1>
         </div>
+        <p className='block md:hidden lg:hidden text-center text-5xl'>&#8675;</p>
 
         <div className='relative bg-gradient-to-r from-[#050e23] to-[#061a47] border-[1px] border-slate-600 rounded-2xl'>
           <div className='p-9'>
@@ -232,6 +238,7 @@ function App() {
           </div>
           <h1 className='text-7xl text-[#142b60]/65 font-bold absolute bottom-0'>04</h1>
         </div>
+        <p className='block md:hidden lg:hidden text-center text-5xl'>&#8675;</p>
 
         <div className='relative bg-gradient-to-r from-[#050e23] to-[#061a47] border-[1px] border-slate-600 rounded-2xl'>
           <div className='p-9'>
@@ -240,6 +247,7 @@ function App() {
           </div>
           <h1 className='text-7xl text-[#142b60]/65 font-bold absolute bottom-0'>05</h1>
         </div>
+        <p className='block md:hidden lg:hidden text-center text-5xl'>&#8675;</p>
 
         <div className='relative bg-gradient-to-r from-[#050e23] to-[#061a47] border-[1px] border-slate-600 rounded-2xl'>
           <div className='p-9'>
