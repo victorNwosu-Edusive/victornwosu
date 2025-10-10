@@ -158,6 +158,7 @@ function App() {
           </div>
           
           </div>
+          </div>
 
           <div className='bg-[#050e23] border-[1px] border-slate-600 rounded-2xl overflow-hidden'>
         <img src={projectSun} alt="" className='object-cover h-[199px] md:h-60 lg:h-60 w-full' />
@@ -171,7 +172,7 @@ function App() {
           <a href="https://sunrise-journal.vercel.app/" target='_blank' className='px-7 py-1 border-[1px] bg-[#07122b] hover:bg-slate-300/10 duration-300 border-slate-600 rounded-md text-white text-[13px]'>View Live &#8599;</a>
           </div>
           
-          </div>
+          
           </div>
 
         </div>
