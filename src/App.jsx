@@ -7,6 +7,7 @@ import projectOne from './assets/images/project-one.jpg'
 import projectTwo from './assets/images/screenshot.png'
 import projectThree from './assets/images/eltronc.png'
 import projectFour from './assets/images/akar.png'
+import projectSun from './assets/images/sun.png'
 import city from './assets/images/manchester-city.svg'
 import nextjs from './assets/images/nextjs.svg'
 import tailwindcss from './assets/images/tailwind-css-svgrepo-com.svg'
@@ -156,6 +157,21 @@ function App() {
           <a href="https://explore-nigeria.vercel.app/" target='_blank' className='px-7 py-1 border-[1px] bg-[#07122b] hover:bg-slate-300/10 duration-300 border-slate-600 rounded-md text-white text-[13px]'>View Live &#8599;</a>
           </div>
           
+          </div>
+
+          <div className='bg-[#050e23] border-[1px] border-slate-600 rounded-2xl overflow-hidden'>
+        <img src={projectSun} alt="" className='object-cover h-[199px] md:h-60 lg:h-60 w-full' />
+        <div className='p-4'>
+        <p className='font-bold mt-5 mb-5 cursor-pointer hover:text-[#48daf7] duration-300'>Sunrise Journal</p>
+          <div className='flex items-center justify-between'>
+            <div className='flex gap-3'>
+          <FontAwesomeIcon icon={faGithub} className="text-white text-2xl" />
+          <FontAwesomeIcon icon={faBehanceSquare} className="text-white text-2xl" />
+          </div>
+          <a href="https://sunrise-journal.vercel.app/" target='_blank' className='px-7 py-1 border-[1px] bg-[#07122b] hover:bg-slate-300/10 duration-300 border-slate-600 rounded-md text-white text-[13px]'>View Live &#8599;</a>
+          </div>
+          
+          </div>
           </div>
 
         </div>
