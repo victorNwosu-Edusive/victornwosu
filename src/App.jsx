@@ -9,9 +9,7 @@ import projectThree from './assets/images/eltronc.png'
 import projectFour from './assets/images/akar.png'
 import projectSun from './assets/images/sun.png'
 import city from './assets/images/manchester-city.svg'
-import nextjs from './assets/images/nextjs.svg'
-import tailwindcss from './assets/images/tailwind-css-svgrepo-com.svg'
-import {faEnvelope, faFile, faFileAlt, faFilePdf, } from "@fortawesome/free-solid-svg-icons";
+import {faEnvelope, faFile, faFileAlt, faFilePdf, faCode, } from "@fortawesome/free-solid-svg-icons";
 import { faBehanceSquare, faCss, faFigma, faGithub, faGithubAlt, faGithubSquare, faInstagram, faInstagramSquare, faJs, faLinkedin, faNodeJs, faReact, faUpwork, faXTwitter } from "@fortawesome/free-brands-svg-icons"
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
 import './App.css'
@@ -220,11 +218,11 @@ function App() {
               {[
                 { icon: faReact, label: "React" },
                 { icon: faNodeJs, label: "Node.js" },
-                { img: tailwindcss, label: "Tailwind" },
+                { icon: faCss, label: "Tailwind" },
                 { icon: faJs, label: "JavaScript" },
                 { icon: faCss, label: "CSS3" },
                 { icon: faFigma, label: "Figma" },
-                { img: nextjs, label: "Next.js" },
+                { icon: faCode, label: "Next.js" },
               ].map((skill, idx) => (
                 <motion.div
                   key={idx}
@@ -325,7 +323,7 @@ function App() {
             </div>
             
             <p className='text-slate-500 text-sm font-medium'>
-              © {new Date().getFullYear()} VICTOR NWOSU. BUILT WITH PASSION.
+              © {new Date().getFullYear()} Victor Nwosu.
             </p>
           </div>
         </footer>
