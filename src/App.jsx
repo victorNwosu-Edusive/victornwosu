@@ -68,10 +68,10 @@ function App() {
                 I'm <span className='text-transparent bg-clip-text bg-gradient-to-r from-blue-600 to-cyan-500 dark:from-blue-400 dark:to-cyan-300'>Victor Nwosu</span>
               </h2>
               <p className='text-xl md:text-2xl font-bold text-slate-700 dark:text-slate-200 mb-6'>
-                Frontend Web Developer
+                Frontend Engineer • Tech Speaker
               </p>
               <p className='text-lg text-slate-600 dark:text-slate-400 max-w-lg mb-10 leading-relaxed'>
-                I build modern, responsive, and user-focused web interfaces that bring ideas to life with clean code and exceptional design.
+                Building world-class products from Africa for the global stage with modern, responsive, and user-first web engineering.
               </p>
               
               <div className='flex flex-wrap gap-4'>
@@ -114,10 +114,10 @@ function App() {
                 <p className='text-blue-600 dark:text-blue-400 font-bold mb-8'>Get to know me</p>
                 <div className='space-y-6 text-lg text-slate-600 dark:text-slate-300 leading-relaxed'>
                   <p>
-                    I'm Victor, a Computer Science graduate, visionary, and Frontend Web Developer with over 6 years of experience in crafting digital experiences.
+                    I'm Victor, a Computer Science graduate, visionary, and Frontend Engineer & Tech Speaker with over 6 years of experience in building digital products from Africa for the world.
                   </p>
                   <p>
-                    I specialize in building high-performance, accessible, and visually stunning web applications. My approach combines technical excellence with a deep understanding of user behavior and design principles.
+                    I specialize in building high-performance, accessible, and culturally aware web applications. My approach is product-focused, designed for global markets with African innovation at the core.
                   </p>
                 </div>
 
@@ -213,7 +213,8 @@ function App() {
         {/* Skills Section */}
         <section id='skills' className='py-32 px-6 md:px-12 bg-slate-50 dark:bg-white/5'>
           <div className='max-w-7xl mx-auto'>
-            <h2 className='text-4xl md:text-5xl font-black mb-16 tracking-tight text-center'>Tech Stack</h2>
+            <h2 className='text-4xl md:text-5xl font-black mb-2 tracking-tight text-center'>Tech Stack & Capabilities</h2>
+            <p className='text-center text-lg text-slate-600 dark:text-slate-400 mb-10'>Frontend engineering, product strategy, and global delivery from African roots.</p>
             
             <div className='grid grid-cols-2 md:grid-cols-4 lg:grid-cols-7 gap-4'>
               {[
@@ -246,8 +247,8 @@ function App() {
         <section id='reviews' className='py-32 px-6 md:px-12'>
           <div className='max-w-7xl mx-auto'>
             <div className='mb-20'>
-              <h2 className='text-4xl md:text-5xl font-black mb-4 tracking-tight'>Work Process</h2>
-              <p className='text-lg text-slate-600 dark:text-slate-400'>My systematic approach to building exceptional products.</p>
+              <h2 className='text-4xl md:text-5xl font-black mb-4 tracking-tight'>Product + Engineering Process</h2>
+              <p className='text-lg text-slate-600 dark:text-slate-400'>A product-centric workflow for launching scalable software from African strategy to global market fit.</p>
             </div>
             
             <div className='grid md:grid-cols-2 lg:grid-cols-3 gap-8'>
@@ -272,6 +273,31 @@ function App() {
                   <p className='text-slate-600 dark:text-slate-400 leading-relaxed relative z-10'>{item.text}</p>
                 </motion.div>
               ))}
+            </div>
+          </div>
+        </section>
+
+        {/* Speaking & Community */}
+        <section id='speaking' className='py-32 px-6 md:px-12 bg-slate-50 dark:bg-white/5'>
+          <div className='max-w-7xl mx-auto text-center'>
+            <h2 className='text-4xl md:text-5xl font-black mb-6 tracking-tight'>Speaking & Community Impact</h2>
+            <p className='text-lg text-slate-600 dark:text-slate-300 mb-12'>Sharing product insights at conferences, mentoring developers, and championing African tech innovation.</p>
+
+            <div className='grid md:grid-cols-3 gap-8'>
+              <div className='p-8 bg-white dark:bg-[#050e23] rounded-3xl border border-slate-200 dark:border-white/10 shadow-sm'>
+                <h3 className='text-2xl font-bold mb-3'>Keynote & Talks</h3>
+                <p className='text-slate-600 dark:text-slate-300 leading-relaxed'>Delivered topical sessions on modern product engineering, design systems, and community-led growth.</p>
+              </div>
+
+              <div className='p-8 bg-white dark:bg-[#050e23] rounded-3xl border border-slate-200 dark:border-white/10 shadow-sm'>
+                <h3 className='text-2xl font-bold mb-3'>Mentorship</h3>
+                <p className='text-slate-600 dark:text-slate-300 leading-relaxed'>Mentored junior engineers from Lagos to Nairobi through workshops and live coding sessions.</p>
+              </div>
+
+              <div className='p-8 bg-white dark:bg-[#050e23] rounded-3xl border border-slate-200 dark:border-white/10 shadow-sm'>
+                <h3 className='text-2xl font-bold mb-3'>Product Focus</h3>
+                <p className='text-slate-600 dark:text-slate-300 leading-relaxed'>Helping teams build product-first experiences that scale internationally while rooted in African values.</p>
+              </div>
             </div>
           </div>
         </section>
