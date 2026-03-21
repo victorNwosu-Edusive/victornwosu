@@ -1,4 +1,4 @@
-
+import { useState, useEffect } from 'react'
 import heroImage from './assets/images/hero-image.jpeg'
 import google from './assets/images/google.svg'
 import youtube from './assets/images/youtube.svg'
@@ -17,291 +17,297 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
 import './App.css'
 import Navbar from './components/Navbar'
 import BackToTop from './components/BackToTop'
+import { motion } from 'framer-motion'
 
 function App() {
+  const [darkMode, setDarkMode] = useState(true);
+
+  useEffect(() => {
+    if (darkMode) {
+      document.documentElement.classList.add('dark');
+    } else {
+      document.documentElement.classList.remove('dark');
+    }
+  }, [darkMode]);
+
+  const toggleTheme = () => {
+    setDarkMode(!darkMode);
+  };
 
   const handleClick = () => {
     window.open("https://github.com/victorNwosu-Edusive", "_blank");
   };
   
   return (
-    <>
-    <Navbar />
-      <div className='bg-[#040a17] h-auto text-white'>
-        <div className='p-11 pt-40 pb-11 md:pt-40 lg:pt-40 md:p-44 lg:p-44'>
-          <div className='grid gap-10 md:gap-4 lg:gap-4 md:grid-cols-2 lg:grid-cols-2'>
-
-            <div>
-            <h1 className='text-[13px] md:text-[14px] lg:text-[14px] text-[#48daf7] tracking-widest font-bold mb-4'>HELLO WORLD!</h1>
-          <h1 className='text-3xl md:text-4xl lg:text-4xl'>I'm <span className='font-bold'>Victor Nwosu</span></h1>
-        <p className='text-[16px] font-bold md:text-2xl lg:text-2xl'>Frontend Web Developer</p>
-        <p className='text-[15px] mt-5 mb-8'>I build modern, responsive, and user-focused web 
-          interfaces that bring ideas to life.</p>
-        
-        <div className='flex gap-2 '>
-        <button className='px-3 text-[11px] font-[500] text-green-200 py-1 bg-green-800/40 rounded-full mt-8 duration-300 flex items-center justify-center gap-2'><div className='h-2 w-2 rounded-full bg-green-300 flex justify-center items-center'><div className='relative h-2 w-2 rounded-full bg-green-300 animate-ping'></div></div>Available for work </button>
-        <button onClick={handleClick} className='px-3 text-[10px] tracking-[0.15em] font-bold py-1 border-[1px] bg-transparent border-slate-600 rounded-md mt-8 hover:text-[#48daf7] duration-300 flex gap-3 items-center justify-center'><FontAwesomeIcon icon={faGithub} className="text-white text-sm" /> GITHUB <p>&#10095;</p> </button>
-        </div>
-        </div>
-
-        <div>
-          <img src={heroImage} alt="" className='rounded-xl h-60 w-auto shadow-[0_0_40px_#48daf7]' />
-        </div>
-
-        </div>
-        </div>
-
-        
-         
-
-        <div id='about-me' className='p-11 pt-36 md:p-20 lg:p-20'>
-          <div className='grid md:grid-cols-2 lg:grid-cols-2 md:gap-6 lg:gap-6 gap-8'>
-            <div>
-            <h1 className='text-2xl md:text-4xl lg:text-4xl font-bold'>About me</h1>
-            <p className='text-base text-slate-300'>Get to know me</p>
-              <p className='text-[14px] mt-5'>
-              I'm Victor, a Computer Science graduate, a visionary, a Frontend 
-              Web Developer (mentored and self-taught) and a Visual designer with 6+ years of experience working with various programming languages, libraries and frameworks. I always strive to do things conscientiously and 
-              continuously work on improving at everything I do. I'm open to connections and Tech opportunities.
+    <div className='min-h-screen transition-colors duration-500 font-sans selection:bg-blue-500/30'>
+      <Navbar darkMode={darkMode} toggleTheme={toggleTheme} />
+      
+      <main className='bg-white dark:bg-[#040a17] text-slate-900 dark:text-white transition-colors duration-500'>
+        {/* Hero Section */}
+        <section className='relative overflow-hidden min-h-[85vh] flex items-center justify-center py-36 px-6 md:px-12'>
+          {/* Background Decorative Blobs */}
+          <div className='absolute top-1/4 -left-20 w-72 h-72 bg-blue-500/20 rounded-full blur-3xl animate-pulse'></div>
+          <div className='absolute bottom-1/4 -right-20 w-96 h-96 bg-purple-500/10 rounded-full blur-3xl animate-pulse delay-1000'></div>
+          
+          <div className='max-w-7xl mx-auto w-full grid md:grid-cols-2 gap-12 items-center relative z-10'>
+            <motion.div 
+              initial={{ opacity: 0, x: -50 }}
+              animate={{ opacity: 1, x: 0 }}
+              transition={{ duration: 0.8, ease: "easeOut" }}
+            >
+              <div className='inline-flex items-center gap-2 px-3 py-1 rounded-full bg-green-500/10 border border-green-500/20 text-green-600 dark:text-green-400 text-xs font-bold mb-6'>
+                <span className='relative flex h-2 w-2'>
+                  <span className='animate-ping absolute inline-flex h-full w-full rounded-full bg-green-400 opacity-75'></span>
+                  <span className='relative inline-flex rounded-full h-2 w-2 bg-green-500'></span>
+                </span>
+                Available for Work
+              </div>
+              
+              <h1 className='text-sm md:text-base text-blue-500 dark:text-[#48daf7] font-black mb-4 uppercase'>HELLO WORLD!</h1>
+              <h2 className='text-3xl md:text-4xl font-extrabold tracking-tight'>
+                I'm <span className='text-transparent bg-clip-text bg-gradient-to-r from-blue-600 to-cyan-500 dark:from-blue-400 dark:to-cyan-300'>Victor Nwosu</span>
+              </h2>
+              <p className='text-xl md:text-2xl font-bold text-slate-700 dark:text-slate-200 mb-6'>
+                Frontend Web Developer
               </p>
+              <p className='text-lg text-slate-600 dark:text-slate-400 max-w-lg mb-10 leading-relaxed'>
+                I build modern, responsive, and user-focused web interfaces that bring ideas to life with clean code and exceptional design.
+              </p>
+              
+              <div className='flex flex-wrap gap-4'>
+                <button 
+                  onClick={handleClick}
+                  className='text-sm flex items-center gap-3 px-7 py-2 bg-slate-900 dark:bg-white text-white dark:text-slate-900 rounded-xl font-bold hover:scale-105 active:scale-95 transition-all duration-300 shadow-xl shadow-blue-500/20'
+                >
+                  <FontAwesomeIcon icon={faGithub} /> GITHUB
+                </button>
+                <a 
+                  href="#projects"
+                  className='text-sm flex items-center gap-3 px-7 py-2 bg-white dark:bg-white/5 text-slate-900 dark:text-white border border-slate-200 dark:border-white/10 rounded-xl font-bold hover:bg-slate-50 dark:hover:bg-white/10 transition-all duration-300'
+                >
+                  VIEW WORK
+                </a>
+              </div>
+            </motion.div>
 
-                {/*<h1 className='font-bold mt-6 mb-2'>Interests:</h1>
-                <div className=' rounded-xl md:p-2 lg:p-2 px-6 bg-[#0a1838] border-slate- w-fit flex justify-items-start gap-3 '>
-                <img src={city} alt="" className='w-14' />
-                <img src={google} alt="" className='w-10' />
-                <img src={youtube} alt="" className='w-10' />
-              </div>*/}
-
-               <div className='flex gap-3 mt-9 items-center'>
-            <a className='bg-transparent border-[1.5px] font-bold tracking-[0.15em] cursor-pointer hover:bg-white/25 duration-300 text-[10px] border-white rounded-md px-6 p-2 flex gap-3 justify-center items-center' href='https://drive.google.com/file/d/1GTossPASvljVXiBq0-xUsskL6OtUq03F/view?usp=drivesdk'><FontAwesomeIcon icon={faFileAlt} className="text-white text-sm" />DOWNLOAD RESUME</a>
+            <div className='relative'>
+              <img 
+                src={heroImage} 
+                alt="Victor Nwosu" 
+                className='relative z-10 w-full max-w-sm mx-auto rounded-3xl shadow-2xl grayscale hover:grayscale-0 transition-all duration-700 hover:scale-[1.02]' 
+              />
+            </div>
           </div>
+        </section>
 
+        {/* About Section */}
+        <section id='about-me' className='py-32 px-6 md:px-12 bg-slate-50 dark:bg-white/5'>
+          <div className='max-w-7xl mx-auto'>
+            <div className='grid md:grid-cols-2 gap-16 items-center'>
+              <motion.div
+                initial={{ opacity: 0, y: 30 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.6 }}
+              >
+                <h2 className='text-4xl md:text-5xl font-black mb-2 tracking-tight'>About me</h2>
+                <p className='text-blue-600 dark:text-blue-400 font-bold mb-8'>Get to know me</p>
+                <div className='space-y-6 text-lg text-slate-600 dark:text-slate-300 leading-relaxed'>
+                  <p>
+                    I'm Victor, a Computer Science graduate, visionary, and Frontend Web Developer with over 6 years of experience in crafting digital experiences.
+                  </p>
+                  <p>
+                    I specialize in building high-performance, accessible, and visually stunning web applications. My approach combines technical excellence with a deep understanding of user behavior and design principles.
+                  </p>
+                </div>
+
+                <div className='mt-10'>
+                  <a 
+                    href='https://drive.google.com/file/d/1GTossPASvljVXiBq0-xUsskL6OtUq03F/view?usp=drivesdk'
+                    target='_blank'
+                    className='inline-flex text-sm items-center gap-3 px-8 py-3 bg-blue-600 text-white rounded-xl font-bold hover:bg-blue-700 transition-all duration-300 shadow-lg shadow-blue-500/25'
+                  >
+                    <FontAwesomeIcon icon={faFileAlt} /> DOWNLOAD RESUME
+                  </a>
+                </div>
+              </motion.div>
+
+              <motion.div
+                initial={{ opacity: 0, scale: 0.9 }}
+                whileInView={{ opacity: 1, scale: 1 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.8 }}
+                className='relative'
+              >
+                <div className='absolute -inset-4 bg-blue-500/20 rounded-3xl blur-xl'></div>
+                <img 
+                  src={aboutPics} 
+                  alt="About Victor" 
+                  className='relative z-10 w-full h-80 object-cover rounded-3xl shadow-2xl'
+                />
+              </motion.div>
+            </div>
+          </div>
+        </section>
+
+        {/* Projects Section */}
+        <section id='projects' className='py-32 px-6 md:px-12'>
+          <div className='max-w-7xl mx-auto'>
+            <div className='text-center max-w-3xl mx-auto mb-20'>
+              <h2 className='text-4xl md:text-5xl font-black mb-4 tracking-tight'>Selected Projects</h2>
+              <p className='text-lg text-slate-600 dark:text-slate-400'>
+                A collection of my recent work where design meets functionality.
+              </p>
             </div>
 
-            <div className=''>
-              <img src={aboutPics} alt="" className='h-96 w-full object-cover md:object-cover lg:object-cover justify-center items-center rounded-xl {/*ring-4 ring-[#48daf7] ring-offset-2 ring-offset-black*/}' />
+            <div className='grid md:grid-cols-2 lg:grid-cols-3 gap-8'>
+              {[
+                { img: projectOne, title: "Top Recipe Book", link: "https://top-recipe-book.vercel.app/" },
+                { img: projectThree, title: "Eltroncs", link: "https://eltroncs.vercel.app/" },
+                { img: projectFour, title: "Akar Estates", link: "https://akar-estates.vercel.app/" },
+                { img: projectTwo, title: "Explore Nigeria", link: "https://explore-nigeria.vercel.app/" },
+                { img: projectSun, title: "Sunrise Journal", link: "https://sunrise-journal.vercel.app/" },
+              ].map((project, idx) => (
+                <motion.div
+                  key={idx}
+                  initial={{ opacity: 0, y: 20 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  viewport={{ once: true }}
+                  transition={{ duration: 0.5, delay: idx * 0.1 }}
+                  className='group relative bg-white dark:bg-white/5 rounded-3xl overflow-hidden border border-slate-200 dark:border-white/10 hover:border-blue-500/50 transition-all duration-500 shadow-xl hover:shadow-2xl hover:shadow-blue-500/10'
+                >
+                  <div className='relative h-64 overflow-hidden'>
+                    <img 
+                      src={project.img} 
+                      alt={project.title} 
+                      className='w-full h-full object-cover transition-transform duration-700 group-hover:scale-110'
+                    />
+                    <div className='absolute inset-0 bg-gradient-to-t from-slate-900/80 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 flex items-end p-8'>
+                      <a 
+                        href={project.link} 
+                        target='_blank'
+                        className='bg-white text-slate-900 px-6 py-2 rounded-full font-bold text-sm transform translate-y-4 group-hover:translate-y-0 transition-transform duration-500'
+                      >
+                        VIEW PROJECT
+                      </a>
+                    </div>
+                  </div>
+                  <div className='p-8'>
+                    <h3 className='text-xl font-bold mb-4 group-hover:text-blue-500 transition-colors duration-300'>{project.title}</h3>
+                    <div className='flex items-center justify-between'>
+                      <div className='flex gap-4'>
+                        <FontAwesomeIcon icon={faGithub} className="text-slate-400 hover:text-blue-500 cursor-pointer transition-colors" />
+                        <FontAwesomeIcon icon={faBehanceSquare} className="text-slate-400 hover:text-blue-500 cursor-pointer transition-colors" />
+                      </div>
+                      <a href={project.link} target='_blank' className='text-blue-500 dark:text-[#48daf7] font-bold text-sm flex items-center gap-2'>
+                        Live Demo <span className='group-hover:translate-x-1 transition-transform'>&#8599;</span>
+                      </a>
+                    </div>
+                  </div>
+                </motion.div>
+              ))}
             </div>
-
           </div>
-        </div>
+        </section>
 
-        
-        <div id='projects' className='p-11 pt-36 md:p-20 lg:p-20'>
-        <h1 className='text-2xl font-bold'>Projects</h1>
-        <p className='text-sm text-slate-300 mb-20'>Take a look at my projects and past works and see what resonates with you.</p>
-        <div className='grid md:grid-cols-3 lg:grid-cols-3 gap-8'>
-        <div className='bg-[#050e23] border-[1px] border-slate-600 rounded-2xl overflow-hidden'>
-          <img src={projectOne} alt="" className='object-cover duration-300 h-[199px] md:h-60 lg:h-60 w-full' />
-          <div className='p-4'>
-          <p className='font-bold mt-5 mb-5 cursor-pointer hover:text-[#48daf7] duration-300'>Top Recipe Book</p>
-          <div className='flex items-center justify-between'>
-          <div className='flex gap-3'>
-          <FontAwesomeIcon icon={faGithub} className="text-white text-2xl" />
-          <FontAwesomeIcon icon={faBehanceSquare} className="text-white text-2xl" />
+        {/* Skills Section */}
+        <section id='skills' className='py-32 px-6 md:px-12 bg-slate-50 dark:bg-white/5'>
+          <div className='max-w-7xl mx-auto'>
+            <h2 className='text-4xl md:text-5xl font-black mb-16 tracking-tight text-center'>Tech Stack</h2>
+            
+            <div className='grid grid-cols-2 md:grid-cols-4 lg:grid-cols-7 gap-4'>
+              {[
+                { icon: faReact, label: "React" },
+                { icon: faNodeJs, label: "Node.js" },
+                { img: tailwindcss, label: "Tailwind" },
+                { icon: faJs, label: "JavaScript" },
+                { icon: faCss, label: "CSS3" },
+                { icon: faFigma, label: "Figma" },
+                { img: nextjs, label: "Next.js" },
+              ].map((skill, idx) => (
+                <motion.div
+                  key={idx}
+                  whileHover={{ y: -5 }}
+                  className='p-8 flex flex-col items-center justify-center gap-4 bg-white dark:bg-[#050e23] border border-slate-200 dark:border-white/5 rounded-2xl shadow-sm hover:shadow-xl transition-all duration-300'
+                >
+                  {skill.icon ? (
+                    <FontAwesomeIcon icon={skill.icon} className="text-4xl text-slate-700 dark:text-white" />
+                  ) : (
+                    <img src={skill.img} alt={skill.label} className='h-10 w-auto' />
+                  )}
+                  <span className='text-sm font-bold text-slate-500 dark:text-slate-400'>{skill.label}</span>
+                </motion.div>
+              ))}
+            </div>
           </div>
-          <a href="https://top-recipe-book.vercel.app/" target="_blank" className='px-7 py-1 border-[1px] bg-[#07122b] hover:bg-slate-300/10 duration-300 border-slate-600 rounded-md text-white text-[13px]'>View Live &#8599;</a>
+        </section>
+
+        {/* Process Section */}
+        <section id='reviews' className='py-32 px-6 md:px-12'>
+          <div className='max-w-7xl mx-auto'>
+            <div className='mb-20'>
+              <h2 className='text-4xl md:text-5xl font-black mb-4 tracking-tight'>Work Process</h2>
+              <p className='text-lg text-slate-600 dark:text-slate-400'>My systematic approach to building exceptional products.</p>
+            </div>
+            
+            <div className='grid md:grid-cols-2 lg:grid-cols-3 gap-8'>
+              {[
+                { num: "01", title: "Plan", text: "Understanding project requirements and breaking them into actionable tasks and milestones." },
+                { num: "02", title: "Design", text: "Creating high-fidelity UI mockups and wireframes to visualize the user experience." },
+                { num: "03", title: "Develop", text: "Writing clean, efficient, and scalable code using modern frameworks and best practices." },
+                { num: "04", title: "Test", text: "Ensuring cross-browser compatibility, responsiveness, and bug-free functionality." },
+                { num: "05", title: "Deploy", text: "Launching the application to production with optimized performance and security." },
+                { num: "06", title: "Review", text: "Analyzing performance data and gathering feedback for continuous improvement." },
+              ].map((item, idx) => (
+                <motion.div
+                  key={idx}
+                  initial={{ opacity: 0, scale: 0.9 }}
+                  whileInView={{ opacity: 1, scale: 1 }}
+                  viewport={{ once: true }}
+                  transition={{ duration: 0.5, delay: idx * 0.1 }}
+                  className='relative group bg-white dark:bg-gradient-to-br dark:from-[#050e23] dark:to-[#061a47] p-10 rounded-3xl border border-slate-200 dark:border-slate-800 shadow-lg'
+                >
+                  <span className='text-6xl font-black text-blue-500/10 dark:text-blue-500/20 absolute bottom-6 right-6 transition-all duration-500 group-hover:scale-110'>{item.num}</span>
+                  <h3 className='text-2xl font-bold mb-6 text-slate-900 dark:text-white'>{item.title}</h3>
+                  <p className='text-slate-600 dark:text-slate-400 leading-relaxed relative z-10'>{item.text}</p>
+                </motion.div>
+              ))}
+            </div>
           </div>
+        </section>
 
-
+        {/* Footer */}
+        <footer id='contact' className='py-32 px-6 md:px-12 bg-slate-900 text-white'>
+          <div className='max-w-7xl mx-auto text-center'>
+            <h2 className='text-4xl md:text-6xl font-black mb-8 italic tracking-tight'>Connect with me</h2>
+            
+            <div className='flex justify-center gap-6 mb-16'>
+              {[
+                { icon: faEnvelope, href: "mailto:nwosuuvictor@gmail.com" },
+                { icon: faXTwitter, href: "https://twitter.com/only_one_victor" },
+                { icon: faLinkedin, href: "https://www.linkedin.com/in/victor-nwosu/" },
+                { icon: faInstagram, href: "https://www.instagram.com/nwosuuvictor" },
+              ].map((social, idx) => (
+                <a 
+                  key={idx}
+                  href={social.href}
+                  className='w-12 h-12 flex items-center justify-center rounded-full bg-white/10 hover:bg-blue-500 transition-all duration-300'
+                >
+                  <FontAwesomeIcon icon={social.icon} className="text-xl" />
+                </a>
+              ))}
+            </div>
+            
+            <p className='text-slate-500 text-sm font-medium'>
+              © {new Date().getFullYear()} VICTOR NWOSU. BUILT WITH PASSION.
+            </p>
           </div>
-
-
-        </div>
-
-        <div className='bg-[#050e23] border-[1px] border-slate-600 rounded-2xl overflow-hidden'>
-          <img src={projectThree} alt="" className='object-cover duration-300 h-[199px] md:h-60 lg:h-60 w-full' />
-          <div className='p-4'>
-          <p className='font-bold mt-5 mb-5 cursor-pointer hover:text-[#48daf7] duration-300'>Eltroncs</p>
-          <div className='flex items-center justify-between'>
-          <div className='flex gap-3'>
-          <FontAwesomeIcon icon={faGithub} className="text-white text-2xl" />
-          <FontAwesomeIcon icon={faBehanceSquare} className="text-white text-2xl" />
-          </div>
-          <a href="https://eltroncs.vercel.app/" target='_blank' className='px-7 py-1 border-[1px] bg-[#07122b] hover:bg-slate-300/10 duration-300 border-slate-600 rounded-md text-white text-[13px]'>View Live &#8599;</a>
-          </div> 
-
-
-          </div>
-
-
-        </div>
-
-        <div className='bg-[#050e23] border-[1px] border-slate-600 rounded-2xl overflow-hidden'>
-          <img src={projectFour} alt="" className='object-cover duration-300 h-[199px] md:h-60 lg:h-60 w-full' />
-          <div className='p-4'>
-          <p className='font-bold mt-5 mb-5 cursor-pointer hover:text-[#48daf7] duration-300'>Akar Estates</p>
-          <div className='flex items-center justify-between'>
-          <div className='flex gap-3'>
-          <FontAwesomeIcon icon={faGithub} className="text-white text-2xl" />
-          <FontAwesomeIcon icon={faBehanceSquare} className="text-white text-2xl" />
-          </div>
-          <a href="https://akar-estates.vercel.app/" target='_blank' className='px-7 py-1 border-[1px] bg-[#07122b] hover:bg-slate-300/10 duration-300 border-slate-600 rounded-md text-white text-[13px]'>View Live &#8599;</a>
-          </div>
-
-
-          </div>
-
-
-        </div>
-
-
-        <div className='bg-[#050e23] border-[1px] border-slate-600 rounded-2xl overflow-hidden'>
-        <img src={projectTwo} alt="" className='object-cover h-[199px] md:h-60 lg:h-60 w-full' />
-        <div className='p-4'>
-        <p className='font-bold mt-5 mb-5 cursor-pointer hover:text-[#48daf7] duration-300'>Explore Nigeria</p>
-          <div className='flex items-center justify-between'>
-            <div className='flex gap-3'>
-          <FontAwesomeIcon icon={faGithub} className="text-white text-2xl" />
-          <FontAwesomeIcon icon={faBehanceSquare} className="text-white text-2xl" />
-          </div>
-          <a href="https://explore-nigeria.vercel.app/" target='_blank' className='px-7 py-1 border-[1px] bg-[#07122b] hover:bg-slate-300/10 duration-300 border-slate-600 rounded-md text-white text-[13px]'>View Live &#8599;</a>
-          </div>
-          
-          </div>
-          </div>
-
-          <div className='bg-[#050e23] border-[1px] border-slate-600 rounded-2xl overflow-hidden'>
-        <img src={projectSun} alt="" className='object-cover h-[199px] md:h-60 lg:h-60 w-full' />
-        <div className='p-4'>
-        <p className='font-bold mt-5 mb-5 cursor-pointer hover:text-[#48daf7] duration-300'>Sunrise Journal</p>
-          <div className='flex items-center justify-between'>
-            <div className='flex gap-3'>
-          <FontAwesomeIcon icon={faGithub} className="text-white text-2xl" />
-          <FontAwesomeIcon icon={faBehanceSquare} className="text-white text-2xl" />
-          </div>
-          <a href="https://sunrise-journal.vercel.app/" target='_blank' className='px-7 py-1 border-[1px] bg-[#07122b] hover:bg-slate-300/10 duration-300 border-slate-600 rounded-md text-white text-[13px]'>View Live &#8599;</a>
-          </div>
-          
-          
-          </div>
-
-        </div>
-        </div>
-
-        </div>
-
-
-        <div id='skills' className='p-11 pt-36 md:p-20 lg:p-20'>
-        <h1 className='text-2xl font-bold mb-4'>Skills & Tech Stack</h1>
-        </div>
-
-        <div className='grid grid-cols-2 md:grid-cols-2 lg:grid-cols-3 gap-2 cursor-pointer'>
-
-        <div className='p-2 px-3 flex justify-center items-center bg-[#050e23] duration-300 hover:bg-[#091328]'>
-        <FontAwesomeIcon icon={faReact} className="text-white text-4xl" />
-        </div> 
-
-        <div className='p-2 px-3 flex justify-center items-center bg-[#050e23] duration-300 hover:bg-[#091328]'>
-        <FontAwesomeIcon icon={faNodeJs} className="text-white text-4xl" />
-        </div>
-
-        <div className='p-2 px-3 flex justify-center items-center bg-[#050e23] duration-300 hover:bg-[#091328]'>
-        <img src={tailwindcss} alt="" className='w-auto h-7' />
-        </div>
-
-        <div className='p-2 px-3 flex justify-center items-center bg-[#050e23] duration-300 hover:bg-[#091328]'>
-        <FontAwesomeIcon icon={faJs} className="text-white text-4xl" />
-        </div>
-
-        <div className='p-2 px-3 flex justify-center items-center bg-[#050e23] duration-300 hover:bg-[#091328]'>
-        <FontAwesomeIcon icon={faCss} className="text-white text-4xl" />
-        </div>
-
-        <div className='p-2 px-3 flex justify-center items-center bg-[#050e23] duration-300 hover:bg-[#091328]'>
-        <FontAwesomeIcon icon={faFigma} className="text-white text-4xl" />
-        </div>
-
-        <div className='p-2 px-3 flex justify-center items-center bg-[#050e23] duration-300 hover:bg-[#091328]'>
-        <img src={nextjs} alt="" className='w-auto h-9' />
-        </div>
-
-        </div>
-
-        <div id='reviews' className='p-11 pt-36 md:p-20 lg:p-20'>
-        <h1 className='text-2xl font-bold'>Process</h1>
-        <p className='text-sm text-slate-300 mb-20'>I use the Agile model of development</p>
-        <div className='grid md:grid-cols-3 lg:grid-cols-3 gap-2 md:gap-7 lg:gap-7'>
-        <div className='relative bg-gradient-to-r from-[#050e23] to-[#061a47] border-[1px] border-slate-600 rounded-2xl'>
-          <div className='p-9'>
-          <p className='font-bold mt-5 text-2xl mb-7'>Plan</p>
-          <p className='text-sm relative z-30'>I start by understanding the project requirements and breaking the into smaller tasks. I define what features to build and how they should function</p>
-          </div>
-          <h1 className='text-7xl text-[#142b60]/65 font-bold absolute bottom-0'>01</h1>
-        </div>
-        <p className='block md:hidden lg:hidden text-center text-5xl'>&#8675;</p>
-
-        <div className='relative bg-gradient-to-r from-[#050e23] to-[#061a47] border-[1px] border-slate-600 rounded-2xl'>
-          <div className='p-9'>
-          <p className='font-bold mt-5 text-2xl mb-7'>Design</p>
-          <p className='text-sm z-30 relative'>I create wireframes or UI mockups to visualize the layout and user experience.</p>
-          </div>
-          <h1 className='text-7xl text-[#142b60]/65 font-bold absolute bottom-0'>02</h1>
-        </div>
-        <p className='block md:hidden lg:hidden text-center text-5xl'>&#8675;</p>
-
-        <div className='relative bg-gradient-to-r from-[#050e23] to-[#061a47] border-[1px] border-slate-600 rounded-2xl'>
-          <div className='p-9'>
-          <p className='font-bold mt-5 text-2xl mb-7'>Develop</p>
-          <p className='text-sm z-30 relative'>I write clean, efficient code. I focus on making the UI responsive and interactive.</p>
-          </div>
-          <h1 className='text-7xl text-[#142b60]/65 font-bold absolute bottom-0'>03</h1>
-        </div>
-        <p className='block md:hidden lg:hidden text-center text-5xl'>&#8675;</p>
-
-        <div className='relative bg-gradient-to-r from-[#050e23] to-[#061a47] border-[1px] border-slate-600 rounded-2xl'>
-          <div className='p-9'>
-          <p className='font-bold mt-5 text-2xl mb-7'>Test</p>
-          <p className='text-sm z-30 relative'>I check for UI inconsistencies, functionality errors, and responsiveness across different devices.</p>
-          </div>
-          <h1 className='text-7xl text-[#142b60]/65 font-bold absolute bottom-0'>04</h1>
-        </div>
-        <p className='block md:hidden lg:hidden text-center text-5xl'>&#8675;</p>
-
-        <div className='relative bg-gradient-to-r from-[#050e23] to-[#061a47] border-[1px] border-slate-600 rounded-2xl'>
-          <div className='p-9'>
-          <p className='font-bold mt-5 text-2xl mb-7'>Deploy</p>
-          <p className='text-sm z-30 relative'>I push the project live. I enusre everything runs smoothly in a real-world environment.</p>
-          </div>
-          <h1 className='text-7xl text-[#142b60]/65 font-bold absolute bottom-0'>05</h1>
-        </div>
-        <p className='block md:hidden lg:hidden text-center text-5xl'>&#8675;</p>
-
-        <div className='relative bg-gradient-to-r from-[#050e23] to-[#061a47] border-[1px] border-slate-600 rounded-2xl'>
-          <div className='p-9'>
-          <p className='font-bold mt-5 text-2xl mb-7'>Review</p>
-          <p className='text-sm z-30 relative'>I analyze how the application performs, get feedback, and see what needs imporvement.</p>
-          </div>
-          <h1 className='text-7xl text-[#142b60]/65 font-bold absolute bottom-0'>06</h1>
-        </div>
-
-
-
-        </div>
-
-        </div>
-
-        <footer id='contact' className='bg-[#050e1b] p-11 text-center'>
-          <h1 className='text-3xl font-bold mb-6'><span className='italic'>Connect</span> with me</h1>
-          <div className='grid grid-cols-1 md:flex lg:flex md:justify-center lg:justify-center gap-3 mb-12'>
-            <div className='flex border-[1px] border-slate-900 p-2 gap-3 items-center justify-center'>
-          <a href="mailto:nwosuuvictor@gmail.com"><FontAwesomeIcon icon={faEnvelope} className="text-white text-xl" /></a>
-          <a href="https://twitter.com/only_one_victor"><FontAwesomeIcon icon={faXTwitter} className="text-white text-xl" /></a>
-          <a href="https://www.linkedin.com/in/victor-nwosu/"><FontAwesomeIcon icon={faLinkedin} className="text-white text-xl" /></a>
-          <a href="https://www.instagram.com/nwosuuvictor"><FontAwesomeIcon icon={faInstagram} className="text-white text-xl" /></a>
-          </div>
-          </div>
-
-          <div className='flex justify-between'>
-          <p className='text-[12px]'>Developed by Victor-Nwosu</p>
-          <p className='text-[12px]'> © {new Date().getFullYear()}</p>
-          </div>
-          <BackToTop />
         </footer>
+      </main>
 
-        
-      </div>
-    </>
-  )
+      <BackToTop />
+    </div>
+  );
 }
 
-export default App
+export default App;

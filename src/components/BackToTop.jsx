@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react";
-import { ArrowUp } from "lucide-react"; // optional (icon)
+import { ArrowUp } from "lucide-react";
+import { motion, AnimatePresence } from "framer-motion";
 
 const BackToTop = () => {
   const [visible, setVisible] = useState(false);
@@ -25,14 +26,21 @@ const BackToTop = () => {
   };
 
   return (
-    visible && (
-      <button
-        onClick={scrollToTop}
-        className="fixed bottom-6 right-6 bg-black text-white p-3 rounded-full shadow-lg hover:bg-gray-800 transition-all duration-300"
-      >
-        <ArrowUp size={20} className="animate-pulse" />
-      </button>
-    )
+    <AnimatePresence>
+      {visible && (
+        <motion.button
+          initial={{ opacity: 0, scale: 0.5 }}
+          animate={{ opacity: 1, scale: 1 }}
+          exit={{ opacity: 0, scale: 0.5 }}
+          whileHover={{ scale: 1.1 }}
+          whileTap={{ scale: 0.9 }}
+          onClick={scrollToTop}
+          className="fixed bottom-8 right-8 z-50 bg-blue-600 dark:bg-white text-white dark:text-slate-900 p-4 rounded-2xl shadow-2xl shadow-blue-500/20 transition-colors duration-500"
+        >
+          <ArrowUp size={24} />
+        </motion.button>
+      )}
+    </AnimatePresence>
   );
 };
 
