@@ -61,7 +61,6 @@ function App() {
                 Available for Work
               </div>
               
-              <h1 className='text-sm md:text-base text-blue-500 dark:text-[#48daf7] font-black mb-4 uppercase'>HELLO WORLD!</h1>
               <h2 className='text-3xl md:text-4xl font-extrabold tracking-tight'>
                 I'm <span className='text-transparent bg-clip-text bg-gradient-to-r from-blue-600 to-cyan-500 dark:from-blue-400 dark:to-cyan-300'>Victor Nwosu</span>
               </h2>
