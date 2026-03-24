@@ -79,7 +79,7 @@ function Navbar({ darkMode, toggleTheme }) {
           href="#contact"
           className='hidden md:block px-6 py-2 bg-slate-900 dark:bg-white text-white dark:text-slate-900 rounded-full font-bold text-sm tracking-wide hover:scale-105 active:scale-95 transition-all duration-300 shadow-lg shadow-blue-500/20'
         >
-          HIRE ME
+          Hire me
         </a>
       </div>
       </nav>
